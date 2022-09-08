@@ -21,7 +21,9 @@ blog({
     {
       title: "Telegram",
       url: "https://t.me/marcelocra",
-      icon: <img style="padding:7px" src="./msg.svg"></img>,
+      icon: (
+        <img style="padding: 7px; filter: invert(75%)" src="./msg.svg"></img>
+      ),
     },
     // { title: "Instagram", url: "https://instagram.com/marcelocra" },
   ],
