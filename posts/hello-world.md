@@ -13,8 +13,9 @@ Inclusive, usei um template que eles mesmos fornecem e é muito prático... se
 quiser tentar, é só clicar no link do rodapé.
 
 Enfim, esse é um exemplo do tipo de conteúdo que vc vai ver por aqui. Desde
-novidades (como Deno) até clássicos como git (post sobre configuração dele em
-múltiplas máquinas e contas em breve!).
+novidades como [Deno](./deno.md) até clássicos como git.
+
+<!-- TODO: adicionar link para post do git aqui! -->
 
 Além disso, vc tb vai ver diversos assuntos do mundo de desenvolvimento de
 software, como:
