@@ -13,7 +13,7 @@ Inclusive, usei um template que eles mesmos fornecem e é muito prático... se
 quiser tentar, é só clicar no link do rodapé.
 
 Enfim, esse é um exemplo do tipo de conteúdo que vc vai ver por aqui. Desde
-novidades como [Deno](./deno.md) até clássicos como git.
+novidades como [Deno](./deno) até clássicos como git.
 
 <!-- TODO: adicionar link para post do git aqui! -->
 
