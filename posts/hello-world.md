@@ -18,12 +18,6 @@ novidades como [Deno](./deno) até clássicos como git.
 <!-- TODO: adicionar link para post do git aqui! -->
 
 Além disso, vc tb vai ver diversos assuntos do mundo de desenvolvimento de
-software, como:
-
-- técnicas
-- boas práticas
-- ferramentas
-- código
-- e mais
+software, como técnicas, boas práticas, ferramentas, código, e mais
 
 Bora!
