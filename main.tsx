@@ -12,7 +12,8 @@ blog({
 
   lang: "pt-br",
   theme: "dark",
-  dateStyle: "medium",
+  dateFormat: (date: Date) =>
+    date.toLocaleDateString("pt-br", { dateStyle: "medium" }),
   port: 1111,
 
   links: [
@@ -22,7 +23,17 @@ blog({
       title: "Telegram",
       url: "https://t.me/marcelocra",
       icon: (
-        <img style="padding: 7px; filter: invert(75%)" src="./msg.svg"></img>
+        <img
+          style="padding: 7px; filter: invert(75%)"
+          src="./msg.svg"
+          onMouseEnter={() => {
+            // Change the color, as in a hover.
+          }}
+          onMouseLeave={() => {
+            // Change the color back.
+          }}
+        >
+        </img>
       ),
     },
     // { title: "Instagram", url: "https://instagram.com/marcelocra" },
