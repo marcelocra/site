@@ -26,12 +26,6 @@ blog({
         <img
           style="padding: 7px; filter: invert(75%)"
           src="./msg.svg"
-          onMouseEnter={() => {
-            // Change the color, as in a hover.
-          }}
-          onMouseLeave={() => {
-            // Change the color back.
-          }}
         >
         </img>
       ),
