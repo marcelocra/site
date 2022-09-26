@@ -1,9 +1,9 @@
 ---
-title: Lista de comandos do `fzf`
+title: Lista de comandos do fzf
 publish_date: 2022-09-25
 
 created_date: 2022-09-25
-last_edit: 2022-09-25
+last_edit: 2022-09-26
 ---
 
 Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma excelente
@@ -25,8 +25,13 @@ lista dos que achei mais úteis.
 
 ## Comandos essenciais
 
-- `ctrl+t`: permite que façamos uma busca na árvore de arquivos que começa no
-  diretório onde estamos atualmente (pwd). Ao selecionar um arquivo ou pasta, o
-  caminho será colocado na linha de comando, para ser usado como quisermos.
-- `alt+c`: mesma ideia do `ctrl+t`, mas muda o pwd para o diretório selecionado
-  (ou seja, faz `cd` para o diretório).
+### `ctrl+t`
+
+Permite que façamos uma busca na árvore de arquivos, começando no diretório onde
+estamos atualmente (pwd). Ao selecionar um arquivo ou pasta, o caminho será
+colocado na linha de comando, para ser usado em outros comandos.
+
+### `alt+c`
+
+Mesma ideia do `ctrl+t`, mas funciona apenas para diretórios e muda o pwd para o
+que foi selecionado (ou seja, faz `cd` para o diretório).
