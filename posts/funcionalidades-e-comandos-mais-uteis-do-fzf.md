@@ -45,4 +45,4 @@ Ao chamar um comando que aceita um arquivo como parâmetro (e.g.
 `fzf` permite que se use `**`. Isso vai ativar a busca fuzzy por arquivos,
 começando no diretório atual (pwd):
 
-![image](https://user-images.githubusercontent.com/2532492/192781159-f4108e6d-b836-461e-9847-c39cbc0ca990.png)
+![fzf sendo usado para preencher o caminho de um arquivo](../assets/fzf-double-star.png)
