@@ -7,8 +7,8 @@ last_edit: 2022-09-28
 ---
 
 Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma excelente
-ferramenta de fuzzy searching (busca sem ter match exato, como o VSCode faz
-no `ctrl+p` e `ctrl+shift+p`, por exemplo).
+ferramenta de fuzzy searching (busca sem ter match exato, como o VSCode faz no
+`ctrl+p` e `ctrl+shift+p`, por exemplo).
 
 Integra muito bem com o terminal e com outras aplicações (Vim/Neovim).
 
@@ -41,8 +41,8 @@ que foi selecionado (ou seja, faz `cd` para o diretório).
 ### Usar `**<tab>` para buscar arquivos
 
 Ao chamar um comando que aceita um arquivo como parâmetro (e.g.
-`vim caminho-do-arquivo.js`), para não ter que preencher o caminho completo,
-o `fzf` permite que se use `**`. Isso vai ativar a busca fuzzy por arquivos,
+`vim caminho-do-arquivo.js`), para não ter que preencher o caminho completo, o
+`fzf` permite que se use `**`. Isso vai ativar a busca fuzzy por arquivos,
 começando no diretório atual (pwd):
 
 ![image](https://user-images.githubusercontent.com/2532492/192781159-f4108e6d-b836-461e-9847-c39cbc0ca990.png)

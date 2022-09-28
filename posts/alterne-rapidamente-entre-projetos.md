@@ -21,8 +21,8 @@ alias jdoc="cd ~/path/to/docs/project"
 alias jblog="cd ~/path/to/blog/project"
 ```
 
-Dessa forma consigo rapidamente alternar para os projetos, simplesmente
-chamando `jdoc`, por exemplo, de qualquer lugar.
+Dessa forma consigo rapidamente alternar para os projetos, simplesmente chamando
+`jdoc`, por exemplo, de qualquer lugar.
 
 Se quiser voltar para a pasta inicial, basta chamar `popd`. Isso porque fizemos
 aquele override do `cd` para `pushd`: esse comando coloca o caminho que você dá
