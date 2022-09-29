@@ -3,7 +3,7 @@ title: Funcionalidades e comandos mais úteis do fzf
 publish_date: 2022-09-25
 
 created_date: 2022-09-25
-last_edit: 2022-09-28
+last_edit: 2022-09-29
 ---
 
 Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma excelente
@@ -25,7 +25,59 @@ Para quem não quiser ver o vídeo, abaixo vou listar os comandos que acho mais
 
 ## Funcionalidades e comandos mais úteis
 
-(Atualizado periodicamente.)
+Sempre que eu descobro algo novo e útil, adiciono aqui.
+
+### Piping (processar output de outros comandos)
+
+Qualquer comando pode ter seu output jogado para o fzf, usando um pipe:
+
+```shell
+find . -type | fzf
+```
+
+(Nesse exemplo em específico, só rodar o comando `fzf` teria o mesmo efeito.)
+
+### Matches exatas
+
+É possível desativar o fuzzy matching usando o apóstrofe dentro do `fzf` ou
+usando a flag `-e` ao ativar o `fzf`:
+
+#### Dentro do fzf
+
+```shell
+# Sem apóstrofe:
+  config-files/Preferences.sublime-settings
+  config-files/windows-terminal-settings.json
+  config-files/vscode-snippets.code-snippets
+  config-files/init_system.sh
+  config-files/init_shell.sh
+> copy-pastes/init.sh
+  6/23
+> init
+
+# Com apóstrofe:
+  config-files/init_system.sh
+  config-files/init_shell.sh
+> copy-pastes/init.sh
+  3/23
+> 'init
+```
+
+#### Antes de chamar o fzf
+
+Ao ativar o `fzf`, é possível dizer que você só quer matches exatos, de forma
+que não precise usar o apóstrofe. Basta usar a flag `-e`:
+
+```shell
+fzf -e
+```
+
+Em seguida, ao digitar `init`, por exemplo, terá os mesmos resultados que no
+exemplo anterior com apóstrofe.
+
+### Ignorar matches
+
+Basta adicionar um `!` antes de termos que quer que sejam excluídos das matches.
 
 ### `ctrl+t`
 
@@ -46,3 +98,6 @@ Ao chamar um comando que aceita um arquivo como parâmetro (e.g.
 começando no diretório atual (pwd):
 
 ![fzf sendo usado para preencher o caminho de um arquivo](../assets/fzf-double-star.png)
+
+```
+```
