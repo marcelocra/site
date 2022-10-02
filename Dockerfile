@@ -19,6 +19,23 @@ RUN apt-get install -y wget git tmux ripgrep curl unzip neovim
 # Download my .tmux.conf.
 RUN wget https://raw.githubusercontent.com/marcelocra/.dotfiles/master/unix/.tmux.conf -P ~
 
+
+# ------------------------------------------------------------------------------
+# - Deno -----------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+# Install and setup.
+RUN curl -fsSL https://deno.land/install.sh | sh
+ENV DENO_INSTALL="${HOME}/.deno"
+ENV PATH="${DENO_INSTALL}/bin:${PATH}"
+
+# ------------------------------------------------------------------------------
+# - Setup ----------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig -P ~
+RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.personal.gitconfig -P ~
+RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.unix.gitconfig -P ~
+RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.linux.gitconfig -P ~
+
 WORKDIR ${HOME}
 
 RUN corepack enable
