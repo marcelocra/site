@@ -13,10 +13,15 @@ Here is a sample of some basic Markdown syntax that can be used when writing Mar
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 ## Paragraph
@@ -36,20 +41,20 @@ The blockquote element represents content that is quoted from another source, op
 #### Blockquote without attribution
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use *Markdown syntax* within a blockquote.
+> **Note** that you can use _Markdown syntax_ within a blockquote.
 
 #### Blockquote with attribution
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+> -- <cite>Rob Pike[^1]</cite>
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
 ## Tables
 
 | Italics   | Bold     | Code   |
-| --------  | -------- | ------ |
-| *italics* | **bold** | `code` |
+| --------- | -------- | ------ |
+| _italics_ | **bold** | `code` |
 
 ## Code Blocks
 
@@ -76,19 +81,19 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Unordered List
 
-* List item
-* Another item
-* And another item
+- List item
+- Another item
+- And another item
 
 #### Nested list
 
-* Fruit
-  * Apple
-  * Orange
-  * Banana
-* Dairy
-  * Milk
-  * Cheese
+- Fruit
+  - Apple
+  - Orange
+  - Banana
+- Dairy
+  - Milk
+  - Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 

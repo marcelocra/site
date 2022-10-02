@@ -1,9 +1,11 @@
 ---
+layout: "../../layouts/BlogPost.astro"
 title: Funcionalidades e comandos mais úteis do fzf
-publish_date: 2022-09-25
+description: ""
 
-created_date: 2022-09-25
-last_edit: 2022-09-30
+pubDate: 2022-09-25
+createdDate: 2022-09-25
+updatedDate: 2022-09-30
 ---
 
 Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma excelente
@@ -55,7 +57,7 @@ Ao chamar um comando que aceita um arquivo como parâmetro (e.g.
 `fzf` permite que se use `**`. Isso vai ativar a busca fuzzy por arquivos,
 começando no diretório atual (pwd):
 
-![fzf sendo usado para preencher o caminho de um arquivo](../assets/fzf-double-star.png)
+![fzf sendo usado para preencher o caminho de um arquivo](/fzf-double-star.png)
 
 ### Ignorar matches
 

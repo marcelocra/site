@@ -1,9 +1,11 @@
 ---
+layout: "../../layouts/BlogPost.astro"
 title: Olá, mundo! Olá Deno!
-publish_date: 2022-09-03
+description:
 
-created_date: 2022-09-03
-last_edit: 2022-09-07
+pubDate: 2022-09-03
+createdDate: 2022-09-03
+updatedDate: 2022-09-07
 ---
 
 Esse blog foi todo construído usando [Deno](./deno), que é uma ferramenta

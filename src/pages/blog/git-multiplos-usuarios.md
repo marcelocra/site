@@ -1,9 +1,11 @@
 ---
+layout: "../../layouts/BlogPost.astro"
 title: A melhor forma de gerenciar múltiplos usuários do GitHub pelo Git
-publish_date: 2022-09-26
+description:
 
-created_date: 2022-09-26
-last_edit: 2022-09-26
+pubDate: 2022-09-26
+createdDate: 2022-09-26
+updatedDate: 2022-09-26
 ---
 
 Depois de um tempo procurando uma boa forma de lidar com múltiplos usuários do
