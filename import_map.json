@@ -1,7 +1,0 @@
-{
-  "imports": {
-    "blog": "https://deno.land/x/blog@0.5.0/blog.tsx",
-    "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/"
-  }
-}

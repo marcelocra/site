@@ -1,9 +1,3 @@
 {
-  "deno.enable": true,
-  "deno.unstable": true,
-  "deno.importMap": "./import_map.json",
-
-  "editor.defaultFormatter": "denoland.vscode-deno",
-
-  "typescript.tsserver.experimental.enableProjectDiagnostics": false
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
