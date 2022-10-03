@@ -12,6 +12,6 @@
       ]
     }
   },
-  "workspaceFolder": "/root/projects/awesome",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/root/projects/awesome,type=bind"
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/personal/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/workspaces/personal/${localWorkspaceFolderBasename}"
 }
