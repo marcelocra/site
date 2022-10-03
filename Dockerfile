@@ -33,8 +33,6 @@ ENV PATH="${DENO_INSTALL}/bin:${PATH}"
 # ------------------------------------------------------------------------------
 RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig -P ~
 RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.personal.gitconfig -P ~
-RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.unix.gitconfig -P ~
-RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.linux.gitconfig -P ~
 
 WORKDIR ${HOME}
 
