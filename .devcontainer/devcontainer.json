@@ -11,5 +11,7 @@
         "bradlc.vscode-tailwindcss"
       ]
     }
-  }
+  },
+  "workspaceFolder": "/root/projects/awesome",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/root/projects/awesome,type=bind"
 }

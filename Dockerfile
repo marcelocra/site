@@ -39,3 +39,5 @@ RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.git
 WORKDIR ${HOME}
 
 RUN corepack enable
+
+RUN apt-get install -y less
