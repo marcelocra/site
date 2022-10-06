@@ -40,7 +40,7 @@ error: Authentication error: Authentication required: You must have push access 
 ```
 
 Desfazendo a mudança que o GCM espera (removendo `marcelocra` no remote acima),
-o comando funciona[^1], retornando os arquivos que serão adicionados:
+o comando funciona**, retornando os arquivos que serão adicionados:
 
 ```shell
 > git lfs push origin main --dry-run --all
@@ -64,5 +64,5 @@ identificar as credenciais, dado que a partir desse ponto tudo funciona, até
 mesmo se você colocar o username novamente na URL do remote (o que você
 provavelmente vai querer fazer)!
 
-[^1]: Assumindo que nesse sistema você ainda não está usando múltiplos
-usuários... se estiver, o final vai te ajudar.
+** Assumindo que nesse sistema você ainda não está usando múltiplos usuários...
+se estiver, o final vai te ajudar.
