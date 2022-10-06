@@ -8,7 +8,7 @@ last_edit: 2022-10-06
 
 `git-lfs` permite que se adicione arquivos grandes em um repositório do git sem
 que o arquivo faça parte do histórico. Basicamente ele adiciona um ponteiro para
-o arquivo, que vai ser armazenado no providor git que você utilizar (por
+o arquivo, que vai ser armazenado no provedor git que você utilizar (por
 exemplo, github).
 
 Git Credential Manager (GCM) é uma forma de gerenciar credenciais do git para um
@@ -34,14 +34,13 @@ Dessa forma, ao tentar rodar o comando para enviar os arquivos para o storage do
 GitHub, temos o seguinte erro:
 
 ```shell
+# Apesar de ser dry-run, ele contacta o servidor.
 > git lfs push origin main --dry-run --all
 error: Authentication error: Authentication required: You must have push access to verify locks
 ```
 
-Desfazendo a mudança que o GCM espera (removendo `marcelocra` no exemplo acima),
-o comando funciona (assumindo que nesse sistema você ainda não está usando
-múltiplos usuários... se estiver, o final vai te ajudar), retornando os arquivos
-que serão adicionados:
+Desfazendo a mudança que o GCM espera (removendo `marcelocra` no remote acima),
+o comando funciona[^1], retornando os arquivos que serão adicionados:
 
 ```shell
 > git lfs push origin main --dry-run --all
@@ -58,11 +57,12 @@ com a seguinte entrada:
   access = basic
 ```
 
-Esse é o segredo!
+E esse é o segredo!
 
-Essa linha que o `git-lfs` adiciona no `.git/config` é o que permite que o
-`git-lfs` identifique as credenciais.
+Essa linha que o `git-lfs` adiciona no `.git/config` é o que parece permiti-lo
+identificar as credenciais, dado que a partir desse ponto tudo funciona, até
+mesmo se você colocar o username novamente na URL do remote (o que você
+provavelmente vai querer fazer)!
 
-Depois de adicionar essa linha, até mesmo se você colocar o username novamente
-na URL do remote (o que você provavelmente vai querer fazer), o `git-lfs` vai
-continuar funcionando!
+[^1]: Assumindo que nesse sistema você ainda não está usando múltiplos
+usuários... se estiver, o final vai te ajudar.
