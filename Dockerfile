@@ -31,3 +31,7 @@ ENV PATH="${DENO_INSTALL}/bin:${PATH}"
 WORKDIR ${HOME}
 
 RUN apt-get install -y neovim
+
+# [ Enable my shell stuff ] ----------------------------------------------------
+RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/init_shell.sh -P ~
+RUN echo 'source ~/init_shell.sh' >> ~/.bashrc
