@@ -24,8 +24,10 @@ blog({
       url: "https://t.me/marcelocra",
       icon: (
         <img
-          style="padding: 7px; filter: invert(75%)"
+          style="filter: invert(75%)"
           src="./msg.svg"
+          height="20"
+          width="20"
         >
         </img>
       ),
