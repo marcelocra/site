@@ -1,11 +1,9 @@
 ---
-import marked from "marked";
-
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { lang } from "../lib/constants";
+import Post from "../components/Post.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -13,11 +11,6 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
-
-const formatDate = (post: string) =>
-  new Date(post).toLocaleDateString(lang, {
-    month: "short",
-  });
 ---
 
 <!DOCTYPE html>
@@ -28,45 +21,9 @@ const formatDate = (post: string) =>
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      {
-        posts.map((post) => (
-          // <section class="grid grid-cols-3">
-          //   <time class="col-span-1" datetime={post.frontmatter.pubDate}>
-          //     {}
-          //   </time>
-          //   <a class="col-span-2" href={post.url}>
-          //     {post.frontmatter.title}
-          //   </a>
-          // </section>
-          <section class="flex flex-col gap-12">
-            <div class="flex gap-6">
-              <div class="sm:w-20 md:w-32">
-                <div class="flex flex-col w-full text-center">
-                  <span class="text-6xl font-semibold">
-                    {new Date(post.frontmatter.pubDate).getDate()}
-                  </span>
-                  <span>{`${formatDate(post.frontmatter.pubDate)} ${new Date(
-                    post.frontmatter.pubDate
-                  ).getFullYear()}`}</span>
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="text-2xl font-semibold hover:underline mb-2">
-                  <a href={post.url} title={post.frontmatter.title}>
-                    {post.frontmatter.title}
-                  </a>
-                </h4>
-                {post.frontmatter.description && (
-                  <p
-                    class="text-lg leading-6 line-clamp-2"
-                    set:html={marked.parse(post.frontmatter.description)}
-                  />
-                )}
-              </div>
-            </div>
-          </section>
-        ))
-      }
+      <section class="flex flex-col gap-12">
+        {posts.map((post) => <Post post={post} />)}
+      </section>
     </main>
     <Footer />
   </body>

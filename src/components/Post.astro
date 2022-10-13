@@ -1,0 +1,45 @@
+---
+import { marked } from "marked";
+
+import { lang } from "../lib/constants";
+
+const formatDate = (post: string) =>
+  new Date(post).toLocaleDateString(lang, {
+    month: "short",
+  });
+
+export interface Props {
+  post: Record<string, any>;
+}
+
+const {
+  frontmatter: { pubDate, title, description },
+  url,
+} = Astro.props.post;
+---
+
+<div class="flex gap-6">
+  <div class="sm:w-20 md:w-32">
+    <div class="flex flex-col w-full text-center">
+      <span class="text-6xl font-semibold">
+        {new Date(pubDate).getDate()}
+      </span>
+      <span>{`${formatDate(pubDate)} ${new Date(pubDate).getFullYear()}`}</span>
+    </div>
+  </div>
+  <div class="flex-1">
+    <h4 class="text-2xl font-semibold mt-0 mb-2">
+      <a href={url} title={title}>
+        {title}
+      </a>
+    </h4>
+    {
+      description && (
+        <p
+          class="text-lg leading-6 line-clamp-2"
+          set:html={marked.parse(description)}
+        />
+      )
+    }
+  </div>
+</div>

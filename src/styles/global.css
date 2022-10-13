@@ -32,6 +32,11 @@ b {
 
 a {
   color: #00b7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 nav a {
@@ -70,6 +75,7 @@ code {
 
 pre {
   padding: 1rem;
+  border-radius: 5px;
 }
 
 pre > code {
