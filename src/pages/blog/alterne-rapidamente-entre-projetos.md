@@ -8,8 +8,6 @@ description: >
 pubDate: 2022-09-21
 createdDate: 2022-09-21
 updatedDate: 2022-09-21
-
-heroImage: "/placeholder-hero.jpg"
 ---
 
 Ainda que `cd` seja um jeito muito fácil de mover entre projetos, dá pra fazer
