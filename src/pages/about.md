@@ -6,7 +6,7 @@ pubDate: Oct 12, 2022
 updatedDate: Oct 12, 2022
 ---
 
-Oi! Meu nome é Marcelo e eu sou programador.
+Oi! Meu nome é Marcelo e eu sou programador e marketeiro.
 
 Minha primeira linha de código foi em 2010 (em C), no curso de Engenharia de
 Computação do ITA.
