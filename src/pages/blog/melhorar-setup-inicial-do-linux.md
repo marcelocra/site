@@ -23,7 +23,7 @@ manuais que tinha que fazer, mas acho que ainda dava menos pau que o Ubuntu.
 bateria com o brilho excessivo. Ele ficava sempre em 100%... usar o note durante
 a noite era horrível, chegava a doer a vista.
 
-Por um tempo usei um hack de mudar o gamma para simular diminuição de brilho. O
+Por um tempo usei um hack de mudar o gamma, para simular diminuição de brilho. O
 resultado era uma tela cinza bem estranha.)
 
 Corta para 2016.
