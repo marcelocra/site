@@ -39,3 +39,5 @@ WORKDIR ${HOME}
 RUN corepack enable
 
 RUN apt-get install -y less
+
+# Stuff is out of order because I don't like losing my Docker cache.

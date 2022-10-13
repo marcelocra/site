@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { lang } from "../lib/constants";
 
 export interface Props {
   content: {
@@ -18,14 +19,14 @@ const {
 } = Astro.props;
 
 function stringDateToDate(date?: string) {
-  return new Date(Date.parse(date ?? "")).toLocaleDateString("pt-br");
+  return new Date(Date.parse(date ?? "")).toLocaleDateString(lang);
 }
 
 const pubDateAsDate = stringDateToDate(pubDate);
 const updatedDateAsDate = stringDateToDate(updatedDate);
 ---
 
-<html lang="pt-br">
+<html lang={lang}>
   <head>
     <BaseHead title={title} description={description} />
     <style>

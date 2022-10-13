@@ -1,7 +1,10 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: ../../layouts/BlogPost.astro
 title: Funcionalidades e comandos mais úteis do fzf
-description: ""
+description: >
+  Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma
+  excelente ferramenta de fuzzy searching (busca sem ter match exato, como o
+  VSCode faz no `ctrl+p` e `ctrl+shift+p`, por exemplo).
 
 pubDate: 2022-09-25
 createdDate: 2022-09-25

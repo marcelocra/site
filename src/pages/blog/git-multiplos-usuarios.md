@@ -1,7 +1,10 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: ../../layouts/BlogPost.astro
 title: A melhor forma de gerenciar múltiplos usuários do GitHub pelo Git
-description:
+description: >
+  Depois de um tempo procurando uma boa forma de lidar com múltiplos usuários do
+  GitHub por meio da linha de comando do Git, finalmente eu encontrei uma
+  solução.
 
 pubDate: 2022-09-26
 createdDate: 2022-09-26

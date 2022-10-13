@@ -1,10 +1,9 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: ../../layouts/BlogPost.astro
 title: Alterne entre projetos rapidamente
 description: >
-  Ainda que `cd` seja um jeito muito fácil de mover entre projetos, dá pra
-  fazer isso mais rapidamente usando uma combinação de `popd`, `pushd` e
-  `alias`.
+  Ainda que `cd` seja um jeito muito fácil de mover entre projetos, dá pra fazer
+  isso mais rapidamente usando uma combinação de `popd`, `pushd` e `alias`.
 
 pubDate: 2022-09-21
 createdDate: 2022-09-21

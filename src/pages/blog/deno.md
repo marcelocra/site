@@ -1,11 +1,13 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: ../../layouts/BlogPost.astro
 title: Hello Deno, goodbye node_modules!
-description:
+description: DRAFT
 
 pubDate: 1970-01-01
 createdDate: 2022-09-07
 updatedDate: 2022-09-07
+
+draft: true
 ---
 
 DRAFT
