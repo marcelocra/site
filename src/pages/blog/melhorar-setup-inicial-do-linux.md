@@ -4,11 +4,9 @@ title: Como melhorar o setup inicial de uma máquina com Linux?
 description: >
   Provavelmente a primeira vez que eu usei Linux foi em 2012. Na época eu estava
   na faculdade fazendo Engenharia de Computação e empolgado com a ideia.
-
 pubDate: 2022-10-12
 createdDate: 2022-10-08
 updatedDate: 2022-10-13
-
 draft: true
 ---
 
