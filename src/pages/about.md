@@ -11,9 +11,9 @@ Oi! Meu nome é Marcelo e eu sou programador.
 Minha primeira linha de código foi em 2010 (em C), no curso de Engenharia de
 Computação do ITA.
 
-Me formei no final de 2015, tendo feito 6 meses de estágio na Google. Depois do
-estágio fui efetivado, e comecei como full-time no escritório de Belo Horizonte
-em fevereiro de 2016.
+Me formei no final de 2015, tendo feito 6 meses de estágio na Google. Fui
+efetivado depois do estágio e comecei como full-time em fevereiro de 2016, no
+escritório de Belo Horizonte.
 
 Depois de 4 anos de muito aprendizado, participando de muitos projetos
 diferentes, decidi sair da empresa e ir trabalhar no Kuadro, uma startup EdTech.
