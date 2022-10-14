@@ -1,7 +1,7 @@
 # Blog
 
 Ainda não defini de fato o que vou usar para construir esse blog. Enquanto isso
-estou escrevendo os posts enquanto testo as coisas (no momento,
+estou escrevendo os posts e testando as coisas (no momento,
 [Astro](https://astro.build)).
 
 Comecei com Deno e o
