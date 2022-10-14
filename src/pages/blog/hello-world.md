@@ -1,8 +1,9 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: Olá, mundo! Olá Deno!
+title: Olá, mundo!
 description: >
-  Esse blog foi todo construído usando [Deno](/blog/deno), que é uma ferramenta
+  Esse blog ~~foi~~ tinha sido construído usando [Deno](/blog/deno), que é uma
+  ferramenta incrível. Agora mudei para outra que também está parecendo
   incrível.
 
 pubDate: 2022-09-03
