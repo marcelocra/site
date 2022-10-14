@@ -7,21 +7,27 @@ description: >
 
 pubDate: 2022-09-03
 createdDate: 2022-09-03
-updatedDate: 2022-09-07
+updatedDate: 2022-10-14
 ---
 
-Esse blog foi todo construído usando [Deno](/blog/deno), que é uma ferramenta
-incrível.
+Esse blog ~~foi~~ tinha sido construído usando [Deno](/blog/deno), que é uma
+ferramenta incrível.
 
-Inclusive, usei um template que eles mesmos fornecem e é muito prático... se
-quiser tentar, é só clicar no link do rodapé.
+~~Usei~~ Tinha usado um template que eles mesmos fornecem e é muito prático...
+se quiser tentar,
+[está nesse repositório](https://github.com/denoland/deno_blog).
 
-Enfim, esse é um exemplo do tipo de conteúdo que vc vai ver por aqui. Desde
-novidades como [Deno](/blog/deno) até clássicos como git.
+_(Edit 14out22: atualmente estou usando [Astro](https://astro.build) e em breve
+devo adicionar um post sobre ele. Esse template do `deno_blog` é bem simples e
+acabou sendo mais limitado. Mas isso seria facilmente resolvido usando o
+[Deno Fresh](https://fresh.deno.dev). Não foi o que eu fiz aqui pq já estou
+usando ele no meu site e queria testar o Astro.)_
 
-<!-- TODO: adicionar link para post do git aqui! -->
+Esse é um exemplo do tipo de conteúdo que vc vai ver por aqui: desde novidades
+como [Deno](/blog/deno) até [clássicos como git](/blog/git-multiplos-usuarios).
 
-Além disso, vc tb vai ver diversos assuntos do mundo de desenvolvimento de
-software, como técnicas, boas práticas, ferramentas, código, e mais
+Além disso, vc tb vai ver diversos assuntos do mundo da programação e
+desenvolvimento de software, como técnicas, boas práticas, ferramentas, código,
+e mais.
 
 Bora!
