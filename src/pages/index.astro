@@ -12,7 +12,9 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
       new Date(b.frontmatter.pubDate).valueOf() -
       new Date(a.frontmatter.pubDate).valueOf()
   )
-  .filter((post) => !post.frontmatter.draft);
+  .filter(
+    (post) => process.env.NODE_ENV === "development" || !post.frontmatter.draft
+  );
 ---
 
 <!DOCTYPE html>
