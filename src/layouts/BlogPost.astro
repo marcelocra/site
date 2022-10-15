@@ -50,15 +50,14 @@ const updatedDateAsDate = stringDateToDate(updatedDate);
         {
           pubDateAsDate && (
             <span>
-              Publicado: <time>{pubDateAsDate}</time>
-            </span>
-          )
-        }
-        -
-        {
-          updatedDateAsDate && (
-            <span>
-              Atualizado: <time>{updatedDateAsDate}</time>
+              Publicado: <time>{pubDateAsDate}</time>{" "}
+              {updatedDateAsDate && (
+                <span>
+                  <i>
+                    (Atualizado: <time>{updatedDateAsDate}</time>)
+                  </i>
+                </span>
+              )}
             </span>
           )
         }
