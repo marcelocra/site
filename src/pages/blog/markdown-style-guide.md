@@ -3,8 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: Como markdown será renderizado nesse tema
 description: >
   (Nota: esse artigo está em inglês porque já veio com o template. Deixei aqui
-  só pra conseguir ver rápido como usar o MDX, caso precise. Depois de um tempo,
-  vou remover.)
+  só pra conseguir ver rápido como usar o MDX, caso precise.)
 
 pubDate: "Jul 01 2022"
 updatedDate: "Oct 11 2022"
