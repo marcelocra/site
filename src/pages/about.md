@@ -24,8 +24,8 @@ cerca de 15 projetos diferentes nesse tempo.
 Em seguida comecei a construir minha própria empresa em uma área completamente
 diferente: marketing digital.
 
-Fiquei quase dois exclusivamente nisso até aceitar a proposta da Hubla e voltar
-a trabalhar com programação, mas agora na área de marketing digital.
+Fiquei quase dois anos exclusivamente nisso até aceitar a proposta da Hubla e
+voltar a trabalhar com programação, mas agora na área de marketing digital.
 
 Hoje ajudo a empresa a construir uma plataforma para permitir que criadores
-vivam e construam um negócio com suas audiências.
+transformem suas audiências em negócios lucrativos.
