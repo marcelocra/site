@@ -57,7 +57,7 @@ push ... => file2
 e populando o `.git/config` (git config local do repositório) automaticamente
 com a seguinte entrada:
 
-```conf
+```ini
 [lfs "https://github.com/marcelocra/blog.git/info/lfs"]
   access = basic
 ```

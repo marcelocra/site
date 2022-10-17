@@ -25,7 +25,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <section class="flex flex-col gap-12">
+      <section class="flex flex-col gap-6">
         {posts.map((post) => <Post post={post} />)}
       </section>
     </main>
