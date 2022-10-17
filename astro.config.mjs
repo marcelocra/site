@@ -1,3 +1,5 @@
+import fs from "node:fs";
+
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -5,10 +7,23 @@ import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 import deno from "@astrojs/deno";
 
+const BASE_URL = "https://blog.marcelocra.dev";
+
+const mdPagesPath = fs
+  .readdirSync("./src/pages/blog")
+  .map((page) => `${BASE_URL}/blog/${page.slice(0, -3)}`);
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://blog.marcelocra.dev",
-  integrations: [mdx(), sitemap(), tailwind(), solidJs()],
+  site: BASE_URL,
+  integrations: [
+    mdx(),
+    sitemap({
+      customPages: [`${BASE_URL}/`, `${BASE_URL}/about`, ...mdPagesPath],
+    }),
+    tailwind(),
+    solidJs(),
+  ],
   output: "server",
   adapter: deno(),
 });
