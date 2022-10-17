@@ -20,12 +20,16 @@ const {
 ---
 
 <div class="grid grid-cols-1 xs:grid-cols-3 gap-3">
-  <div class="col-span-1 w-full text-center">
-    <div class="grid grid-cols-1">
-      <span class="text-6xl font-semibold">
+  <div class="col-span-1 w-full xs:text-center">
+    <div class="grid grid-rows-1 xs:grid-cols-1 place-content-start">
+      <span
+        class="italic text-gray-500 xs:text-[#e9e9e9] xs:not-italic xs:text-6xl xs:font-semibold"
+      >
         {new Date(pubDate).getDate()}
+        <span class="xs:text-base font-normal xs:block"
+          >{`${formatDate(pubDate)}`}</span
+        >
       </span>
-      <span>{`${formatDate(pubDate)}`}</span>
     </div>
   </div>
   <div class="col-span-1 xs:col-span-2">
