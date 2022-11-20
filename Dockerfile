@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:16.17.1
+FROM node:18.12.1
 
 ENV HOME="/root"
 
@@ -14,7 +14,7 @@ RUN echo 'PS1="\$(printf \"=%.0s\" \$(seq 1 \${COLUMNS}))\n[\$(TZ=\"America/Sao_
 
 # Update and install essentials.
 RUN apt-get update
-RUN apt-get install -y wget git tmux ripgrep curl unzip neovim
+RUN apt-get install -y wget git tmux ripgrep curl unzip neovim less
 
 # Download my .tmux.conf.
 RUN wget https://raw.githubusercontent.com/marcelocra/.dotfiles/master/unix/.tmux.conf -P ~
@@ -37,7 +37,5 @@ RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.git
 WORKDIR ${HOME}
 
 RUN corepack enable
-
-RUN apt-get install -y less
 
 # Stuff is out of order because I don't like losing my Docker cache.
