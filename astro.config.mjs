@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 import deno from "@astrojs/deno";
 
-const BASE_URL = "https://blog.marcelocra.dev";
+const BASE_URL = "https://marcelocra.dev";
 
 const mdPagesPath = fs
   .readdirSync("./src/pages/blog")
