@@ -1,0 +1,68 @@
+a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  margin-right: 10px;
+}
+
+textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
+}
+
+content {
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  padding: 2px 5px;
+  background-color: #e9e9e9;
+  color: #000;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #e9e9e9;
+}
+
+pre > code {
+  all: unset;
+}
+
+blockquote {
+  border: 1px solid #e9e9e9;
+  padding: 2px 0 2px 20px;
+  margin: 0;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+cite {
+  display: block;
+}
+
+blockquote cite:before {
+  content: "\2014";
+}
