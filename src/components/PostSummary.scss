@@ -1,3 +1,5 @@
+@import "../styles/_constants.scss";
+
 section a {
   color: #00b7ff;
   text-decoration: none;
@@ -12,11 +14,7 @@ section content {
 }
 
 section code {
-  padding: 2px 5px;
-  background-color: #e9e9e9;
-  color: #000;
-  font-weight: 700;
-  border-radius: 5px;
+  @include inline-code-highlight;
 }
 
 section pre {
