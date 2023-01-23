@@ -1,4 +1,4 @@
-@import "../styles/_constants.scss";
+@use "../styles/constants.scss";
 
 article hr {
   border: transparent;
@@ -33,7 +33,7 @@ article img {
 }
 
 article code {
-  @include inline-code-highlight;
+  @include constants.inline-code-highlight;
 }
 
 article pre {

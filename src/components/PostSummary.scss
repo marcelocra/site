@@ -1,4 +1,4 @@
-@import "../styles/_constants.scss";
+@use "../styles/constants.scss";
 
 section a {
   color: #00b7ff;
@@ -14,7 +14,7 @@ section content {
 }
 
 section code {
-  @include inline-code-highlight;
+  @include constants.inline-code-highlight;
 }
 
 section pre {
