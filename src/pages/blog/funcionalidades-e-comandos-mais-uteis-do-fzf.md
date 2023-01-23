@@ -9,6 +9,10 @@ description: >
 pubDate: 2022-09-25
 createdDate: 2022-09-25
 updatedDate: 2022-09-30
+tags:
+  - fzf
+  - terminal
+  - zsh
 ---
 
 Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma excelente

@@ -7,6 +7,8 @@ description: >
 pubDate: 2022-09-07
 createdDate: 2022-09-07
 updatedDate: 2022-10-15
+tags:
+  - deno
 ---
 
 [Deno](https://deno.land) é um projeto bem interessante! Só de não ter

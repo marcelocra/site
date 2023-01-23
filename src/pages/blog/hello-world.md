@@ -9,6 +9,11 @@ description: >
 pubDate: 2022-09-03
 createdDate: 2022-09-03
 updatedDate: 2022-10-14
+tags:
+  - deno
+  - astro
+  - blog
+  - git
 ---
 
 Esse blog ~~foi~~ tinha sido construído usando [Deno](/blog/deno), que é uma

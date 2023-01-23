@@ -8,6 +8,10 @@ description: >
 pubDate: "Jul 01 2022"
 updatedDate: "Oct 11 2022"
 heroImage: "/placeholder-hero.jpg"
+tags:
+  - mdx
+  - md
+  - markdown
 ---
 
 (Nota: esse artigo está em inglês porque já veio com o template. Deixei aqui só

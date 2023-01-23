@@ -9,6 +9,9 @@ description: >
 pubDate: 2022-09-26
 createdDate: 2022-09-26
 updatedDate: 2022-09-26
+tags:
+  - git
+  - git credential manager
 ---
 
 Depois de um tempo procurando uma boa forma de lidar com múltiplos usuários do

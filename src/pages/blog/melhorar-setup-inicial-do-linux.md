@@ -7,6 +7,10 @@ description: >
 pubDate: 2022-10-12
 createdDate: 2022-10-08
 updatedDate: 2022-10-15
+tags:
+  - linux
+  - setup
+  - ubuntu
 ---
 
 Provavelmente a primeira vez que eu usei Linux foi em 2012. Na época eu estava

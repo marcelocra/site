@@ -10,6 +10,11 @@ description: >
 pubDate: 2022-10-06
 createdDate: 2022-10-06
 updatedDate: 2022-10-12
+tags:
+  - git
+  - git-lfs
+  - github
+  - git credential manager
 ---
 
 `git-lfs` permite que se adicione arquivos grandes em um repositório do git sem
