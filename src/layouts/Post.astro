@@ -1,0 +1,53 @@
+---
+import { lang } from "../lib/constants";
+import Site from "./Site.astro";
+
+import "./Post.module.css";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+
+const {
+  content: { title, pubDate, updatedDate, heroImage },
+} = Astro.props;
+
+function stringDateToDate(date?: string) {
+  return new Date(Date.parse(date ?? "")).toLocaleDateString(lang);
+}
+
+const pubDateAsDate = stringDateToDate(pubDate);
+const updatedDateAsDate = stringDateToDate(updatedDate);
+---
+
+<Site>
+  <div slot="main">
+    <article class="md:w-1/2 md:m-auto">
+      {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+      <h1 class="text-3xl mt-1">{title}</h1>
+      {
+        pubDateAsDate && (
+          <span>
+            Publicado: <time>{pubDateAsDate}</time>{" "}
+            {updatedDateAsDate && (
+              <span>
+                <i>
+                  (Atualizado: <time>{updatedDateAsDate}</time>)
+                </i>
+              </span>
+            )}
+          </span>
+        )
+      }
+      <hr />
+
+      <slot />
+    </article>
+  </div>
+</Site>

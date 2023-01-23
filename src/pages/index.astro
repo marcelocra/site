@@ -1,8 +1,5 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Site from "../layouts/Site.astro";
 
 const SECTIONS: {
   title: string;
@@ -42,19 +39,17 @@ const SECTIONS: {
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body class="grid grid-cols-1 gap-3 md:gap-5 m-3 md:m-auto md:mt-3 md:w-3/5">
-    <Header title={SITE_TITLE} />
+<Site>
+  <div
+    class="grid grid-cols-1 gap-3 md:gap-5 m-3 md:m-auto md:w-3/5"
+    slot="main"
+  >
     <div class="px-3 md:px-0 md:text-center">
       Olá! Meu nome é <strong>Marcelo</strong>, sou Engenheiro de Computação e
       trabalho com <strong>design e desenvolvimento de software</strong>. Aqui
       você pode conferir meus projetos e mídias.
     </div>
-    <main class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       {
         SECTIONS.map((section) => (
           <a
@@ -77,7 +72,6 @@ const SECTIONS: {
           </a>
         ))
       }
-    </main>
-    <Footer />
-  </body>
-</html>
+    </div>
+  </div>
+</Site>

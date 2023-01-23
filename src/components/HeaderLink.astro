@@ -7,7 +7,7 @@ const isActive = href === Astro.url.pathname.replace(/\/$/, "");
 
 <a
   href={href}
-  class:list={["text-purple-500", "px-2", className, { active: isActive }]}
+  class:list={["text-purple-500", className, { active: isActive }]}
   {...props}
 >
   <slot />

@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/BlogPost.astro
+layout: ../layouts/Post.astro
 title: Sobre mim
 description: Uma página com detalhes de quem eu sou
 pubDate: Oct 12, 2022

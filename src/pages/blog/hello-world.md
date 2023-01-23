@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/Post.astro
 title: Olá, mundo!
 description: >
   Esse blog ~~foi~~ tinha sido construído usando [Deno](/blog/deno), que é uma

@@ -3,6 +3,8 @@ import { marked } from "marked";
 
 import { lang } from "../lib/constants";
 
+import "./PostSummary.module.css";
+
 const formatDate = (post: string) =>
   new Date(post).toLocaleDateString(lang, {
     month: "short",
@@ -38,6 +40,8 @@ const {
         {title}
       </a>
     </h4>
-    {description && <p class="m-0" set:html={marked.parse(description)} />}
+    <section>
+      {description && <p class="m-0" set:html={marked.parse(description)} />}
+    </section>
   </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/Post.astro
 title: Usando git-lfs com Git Credential Manager
 description: >
   `git-lfs` permite que se adicione arquivos grandes em um repositório do git
