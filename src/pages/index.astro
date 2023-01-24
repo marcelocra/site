@@ -9,7 +9,7 @@ const SECTIONS: {
 }[] = [
   {
     title: "Blog",
-    link: "https://marcelocra.dev/blog",
+    link: "/blog",
     description:
       "Aprenda sobre design de software, programação, ferramentas de desenvolvimento e produtividade, e muito mais.",
     props: {},
@@ -40,33 +40,28 @@ const SECTIONS: {
 ---
 
 <Site>
-  <div
-    class="grid grid-cols-1 gap-3 md:gap-5 m-3 md:m-auto md:w-3/5 2xl:w-1/3"
-    slot="main"
-  >
-    <div class="px-3 md:px-0 md:text-center">
+  <div class="grid grid-cols-1 gap-3 md:gap-5" slot="main">
+    <div class="px-3 md:px-0 text-center">
       Olá! Meu nome é <strong>Marcelo</strong>, sou Engenheiro de Computação e
       trabalho com <strong>design e desenvolvimento de software</strong>. Aqui
       você pode conferir meus projetos e mídias.
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
       {
         SECTIONS.map((section) => (
           <a
-            class={`border rounded-md no-underline p-3 m-3 ${
+            class={`rounded-md no-underline p-3 ${
               section.link
-                ? "hover:bg-purple-800 text-white border-gray-400"
-                : "cursor-not-allowed text-gray-500 border-gray-500"
+                ? "hover:bg-[color:var(--primary-color)] text-white hover:text-black"
+                : "cursor-not-allowed text-gray-500"
             }`}
-            style="border: 1px solid #e9e9e9"
+            style="border: 1px solid var(--my-gray)"
             href={section.link ?? ""}
             title={section.link ? "" : "Em construção"}
             {...section.props}
           >
             {section.title && (
-              <div class="border border-purple-800 text-xl font-bold">
-                {section.title}
-              </div>
+              <div class="text-xl font-bold">{section.title}</div>
             )}
             {section.description && <div>{section.description}</div>}
           </a>

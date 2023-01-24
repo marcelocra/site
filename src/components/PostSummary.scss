@@ -14,13 +14,11 @@ section content {
 }
 
 section code {
-  @include constants.inline-code-highlight;
+  @include constants.code;
 }
 
 section pre {
-  padding: 1rem;
-  border-radius: 5px;
-  border: 1px solid #e9e9e9;
+  @include constants.pre;
 }
 
 section pre > code {

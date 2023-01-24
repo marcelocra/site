@@ -33,13 +33,11 @@ article img {
 }
 
 article code {
-  @include constants.inline-code-highlight;
+  @include constants.code;
 }
 
 article pre {
-  padding: 1rem;
-  border-radius: 5px;
-  border: 1px solid #e9e9e9;
+  @include constants.pre;
 }
 
 article pre > code {
@@ -47,10 +45,9 @@ article pre > code {
 }
 
 article blockquote {
-  border: 1px solid #e9e9e9;
-  padding: 2px 0 2px 20px;
+  border-left: 3px solid var(--my-gray);
+  padding: 0 8px 0 0;
   margin: 0;
-  font-style: italic;
   border-radius: 5px;
 }
 
