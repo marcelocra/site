@@ -3,7 +3,7 @@ layout: ../layouts/Post.astro
 title: Sobre mim
 description: Uma página com detalhes de quem eu sou
 pubDate: Oct 12, 2022
-updatedDate: Oct 12, 2022
+updatedDate: Jan 23, 2023
 ---
 
 Oi! Meu nome é Marcelo e eu sou programador e marketeiro.
@@ -27,5 +27,5 @@ diferente: marketing digital.
 Fiquei quase dois anos exclusivamente nisso até aceitar a proposta da Hubla e
 voltar a trabalhar com programação, mas agora na área de marketing digital.
 
-Hoje ajudo a empresa a construir uma plataforma para permitir que criadores
-transformem suas audiências em negócios lucrativos.
+Hoje ajudo a empresa a construir uma plataforma para que criadores transformem
+suas audiências em negócios lucrativos!
