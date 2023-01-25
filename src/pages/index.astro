@@ -3,38 +3,44 @@ import Site from "../layouts/Site.astro";
 
 const SECTIONS: {
   title: string;
-  link: string | null;
   description: string;
-  props: { rel?: string };
+  props: { [key: string]: string };
 }[] = [
   {
     title: "Blog",
-    link: "/blog",
     description:
       "Aprenda sobre design de software, programação, ferramentas de desenvolvimento e produtividade, e muito mais.",
-    props: {},
+    props: {
+      href: "/blog",
+    },
   },
   {
     title: "Mastodon",
-    link: "https://mastodon.social/@marcelocra",
     description:
       "Veja novidades do mundo da tecnologia e empreendedorismo com mais velocidade.",
     props: {
       rel: "me",
+      href: "https://mastodon.social/@marcelocra",
     },
   },
   {
     title: "YouTube",
-    link: null,
     description: "Aprenda sobre os mesmos tópicos do blog, porém em vídeo!",
-    props: {},
+    props: {
+      title: "Em construção",
+      role: "link",
+      "aria-disabled": "true",
+    },
   },
   {
     title: "Newsletter (email)",
-    link: null,
     description:
       "Fique por dentro de tudo que acontece no mundo do desenvolvimento! Saiba sobre novos artigos, blogs, vídeos e mais.",
-    props: {},
+    props: {
+      title: "Em construção",
+      role: "link",
+      "aria-disabled": "true",
+    },
   },
 ];
 ---
@@ -51,13 +57,11 @@ const SECTIONS: {
         SECTIONS.map((section) => (
           <a
             class={`rounded-md no-underline p-3 ${
-              section.link
-                ? "hover:bg-[color:var(--primary-color)] text-white hover:text-black"
+              section.props.href
+                ? "rounded-md no-underline p-3 hover:bg-[color:var(--primary-color)] text-white hover:text-black"
                 : "cursor-not-allowed text-gray-500"
             }`}
             style="border: 1px solid var(--my-gray)"
-            href={section.link ?? ""}
-            title={section.link ? "" : "Em construção"}
             {...section.props}
           >
             {section.title && (
