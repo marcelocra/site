@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/deno': ^4.0.0
   '@astrojs/mdx': ^0.15.0
+  '@astrojs/partytown': ^1.0.3
   '@astrojs/rss': ^2.1.0
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/solid-js': ^2.0.0
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   '@astrojs/deno': 4.0.0_astro@2.0.1
   '@astrojs/mdx': 0.15.0_astro@2.0.1+rollup@3.10.1
+  '@astrojs/partytown': 1.0.3
   '@astrojs/rss': 2.1.0
   '@astrojs/sitemap': 1.0.0
   '@astrojs/solid-js': 2.0.0_hun3lpevzr4tdr7hgpcgwdo7ni
@@ -136,6 +138,13 @@ packages:
       - astro
       - rollup
       - supports-color
+    dev: false
+
+  /@astrojs/partytown/1.0.3:
+    resolution: {integrity: sha512-u2/pG9owRipICz/PksLUUqUat98sm0/YODvv3/IKKJ0JCwF7+0olbMvyyvoj7kJooIXh0XowcOjEs5vhCYFo5g==}
+    dependencies:
+      '@builder.io/partytown': 0.7.5
+      mrmime: 1.0.1
     dev: false
 
   /@astrojs/prism/2.0.0:
@@ -442,6 +451,11 @@ packages:
       '@babel/helper-string-parser': 7.18.10
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+
+  /@builder.io/partytown/0.7.5:
+    resolution: {integrity: sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==}
+    hasBin: true
+    dev: false
 
   /@emmetio/abbreviation/2.2.3:
     resolution: {integrity: sha512-87pltuCPt99aL+y9xS6GPZ+Wmmyhll2WXH73gG/xpGcQ84DRnptBsI2r0BeIQ0EB/SQTOe2ANPqFqj3Rj5FOGA==}
@@ -2861,6 +2875,11 @@ packages:
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
+    dev: false
+
+  /mrmime/1.0.1:
+    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
+    engines: {node: '>=10'}
     dev: false
 
   /ms/2.1.2:
