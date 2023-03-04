@@ -23,7 +23,9 @@ function stringDateToDate(date?: string) {
 }
 
 const pubDateAsDate = stringDateToDate(pubDate);
-const updatedDateAsDate = stringDateToDate(updatedDate);
+const updatedDateAsDate = updatedDate
+  ? stringDateToDate(updatedDate)
+  : undefined;
 ---
 
 <Site>
