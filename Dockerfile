@@ -36,8 +36,10 @@ ENV PATH="${DENO_INSTALL}/bin:${PATH}"
 # ------------------------------------------------------------------------------
 RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig -P ~
 RUN wget https://raw.githubusercontent.com/marcelocra/dev/main/config-files/.gitconfig.personal.gitconfig -P ~
-
-WORKDIR ${HOME}
-
 RUN corepack enable
 
+WORKDIR /workspaces/personal/site
+
+RUN pnpm install
+
+# Stuff is out of order because I don't like losing my Docker cache.
