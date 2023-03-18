@@ -1,11 +1,12 @@
 ---
 layout: ../../layouts/Post.astro
-title: Aprendendo liguagens de programação no Exercism
+title: Aprendendo liguagens de programação (funcionais?) no Exercism
 description: >
   Uma forma bem interessante de aprender linguagens de programação.
 
 pubDate: 2023-03-04
 createdDate: 2023-03-02
+updatedDate: 2023-03-17
 tags:
   - f#
   - fsharp
@@ -30,13 +31,13 @@ realmente precisa aprender um novo jeito de pensar.
 Um bom exemplo disso são as linguagens funcionais.
 
 Quando você começa a aprender alguma delas -- especialmente as que não te dão
-muitas formas de "escapar" da parte funcional -- acaba se forçando a resolver
+muitas formas de "escapar" da parte funcional --, acaba se forçando a resolver
 problemas de uma maneira bem diferente.
 
 Vamos ver um exemplo prático.
 
 O problema: como montar acrônimos das palavras de uma frase, considerando apenas
-`-` e ` ` (espaço) como separadores e ignorando casing (upper/lower). Por
+`-` e `_` (espaço) como separadores e ignorando casing (upper/lower). Por
 exemplo, "Visual Studio Code" seria "VSC", "kebab-case" seria "KB".
 
 (Esse é um dos exercícios de F# no [Exercism](https://exercism.org). Falo mais
@@ -61,7 +62,7 @@ A solução em F# fica assim:
 
 ```f#
 let abbreviate (phrase: string) =
-    // Everything that is not a letter or space, in this case.
+    // Everything that is not a letter or space.
     let delimiters = "[^a-zA-Z ]"
 
     // '-' is considered whitespace, so remove it first.
@@ -97,8 +98,8 @@ e bem definido do que fazer.
 
 O [Exercism](https://exercism.org), que mencionei acima, é diferente.
 
-Ele traz uma trilha (que chama de syllabus) bem definida, que alterna entre
-conceitos e exercícios, com dificuldade crescente.
+Ele tem trilhas para várias linguagens, algumas com programa de estudo (chama de
+syllabus) bem definido, alternando entre conceitos e exercícios.
 
 À medida que você vai avançando, vai tendo desafios mais difíceis e aprendendo
 partes mais complexas das linguagens.
@@ -111,8 +112,14 @@ estimula as pessoas a aprenderem o básico de 12 linguagens diferentes durante
 2023, uma por mês.
 
 Além disso, cada mês foca em um estilo diferente. Fevereiro, por exemplo, focava
-em linguagens funcionais tipo F#, Elixir, Haskell e outras. Março tem as
-linguagens mais "próximas da máquina" como foco, tipo Go e Rust.
+em linguagens funcionais tipo F#, Elixir, Haskell e outras. Março foca nas
+linguagens mais "próximas da máquina", como Go, Rust, Nim, Zig, V e as
+conhecidas C e C++.
+
+<div class="italic text-xs text-orange-400">
+Edit 17mar2023: estou testando diversas trilhas, incluindo Common Lips, Rust e 
+V (vlang.io). Está sendo bem interessante.
+</div>
 
 Terão meses com linguagens ainda mais incomuns, tipo Smalltalk, Prolog, Common
 Lisp, etc.
@@ -120,6 +127,7 @@ Lisp, etc.
 Vou testando e mais pra frente conto se deu certo ou não.
 
 E se você quiser testar junto, dá uma olhada
-[no site do projeto](https://exercism.org/challenges/12in23) Se quiser aprender
-um jeito diferente de pensar sobre programação, aprenda uma linguagem nova. O
-Exercism é uma boa forma de fazer isso.
+[no site do projeto](https://exercism.org/challenges/12in23).
+
+Se quiser aprender um jeito diferente de pensar sobre programação, aprenda uma
+linguagem nova. O Exercism é uma boa forma de fazer isso.
