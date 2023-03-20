@@ -3,11 +3,16 @@ import PostSummary from "../../components/PostSummary.astro";
 import Site from "../../layouts/Site.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-);
+const posts = (await Astro.glob("./*.{md,mdx}"))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .filter(
+    // We want to show drafts in dev env only.
+    (post) => process.env.NODE_ENV === "development" || !post.frontmatter.draft
+  );
 ---
 
 <Site>
