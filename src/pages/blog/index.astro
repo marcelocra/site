@@ -9,10 +9,7 @@ const posts = (await Astro.glob("./*.{md,mdx}"))
       new Date(b.frontmatter.pubDate).valueOf() -
       new Date(a.frontmatter.pubDate).valueOf()
   )
-  .filter(
-    // We want to show drafts in dev env only.
-    (post) => process.env.NODE_ENV === "development" || !post.frontmatter.draft
-  );
+  .filter((post) => !post.frontmatter.draft);
 ---
 
 <Site>
