@@ -1,83 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Blog</title>
+    <title>Modern Tailwind CSS Site</title>
+    <!-- Add Tailwind CSS via CDN -->
     <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-mYBtI/fHtZ/cGtZoQjT62TtgyH8Fi9Xm/f7m2Qk0iC7NLfE6p+Z7VgZvrru0HszMUBo9Xy+/6A5UOY/v/g6Wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-    />
-    <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#" class="logo">My Blog</a>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <i class="fas fa-bars"></i>
+  <body class="bg-gray-100">
+    <header
+      class="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-md"
+    >
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="font-semibold text-xl">Brand</a>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-white hover:text-blue-100">Home</a>
+            <a href="#" class="text-white hover:text-blue-100">About</a>
+            <a href="#" class="text-white hover:text-blue-100">Services</a>
+            <a href="#" class="text-white hover:text-blue-100">Contact</a>
+          </div>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="intro">
-        <h1>Welcome to my blog</h1>
-        <p>Here you will find articles on a variety of topics.</p>
-      </section>
-      <section class="blog-posts">
-        <article>
-          <img
-            src="https://via.placeholder.com/400x250"
-            alt="Blog post image"
-          />
-          <h2>My first blog post</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    <main class="container mx-auto mt-12">
+      <h1 class="font-bold text-3xl mb-6">Welcome to our modern site!</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="font-semibold text-2xl mb-4">Feature 1</h2>
+          <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+            odio.
           </p>
-          <a href="#" class="read-more">Read more</a>
-        </article>
-        <article>
-          <img
-            src="https://via.placeholder.com/400x250"
-            alt="Blog post image"
-          />
-          <h2>My second blog post</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="font-semibold text-2xl mb-4">Feature 2</h2>
+          <p class="text-gray-700">
+            Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis
+            sem at nibh elementum imperdiet.
           </p>
-          <a href="#" class="read-more">Read more</a>
-        </article>
-        <article>
-          <img
-            src="https://via.placeholder.com/400x250"
-            alt="Blog post image"
-          />
-          <h2>My third blog post</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="font-semibold text-2xl mb-4">Feature 3</h2>
+          <p class="text-gray-700">
+            Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
+            semper porta.
           </p>
-          <a href="#" class="read-more">Read more</a>
-        </article>
-      </section>
+        </div>
+      </div>
     </main>
-    <footer>
-      <p>&copy; My Blog 2023</p>
+
+    <footer class="bg-gray-800 text-white mt-12 py-6">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-300">
+          &copy; 2023 Brand Name. All rights reserved.
+        </p>
+      </div>
     </footer>
-    <script src="/script.js"></script>
   </body>
 </html>
