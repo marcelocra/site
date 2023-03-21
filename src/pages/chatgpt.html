@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Tailwind CSS Site</title>
-    <!-- Add Tailwind CSS via CDN -->
+    <title>Amazing Tailwind CSS Site</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
@@ -19,40 +18,189 @@
           <a href="#" class="font-semibold text-xl">Brand</a>
           <div class="hidden md:flex items-center space-x-8">
             <a href="#" class="text-white hover:text-blue-100">Home</a>
-            <a href="#" class="text-white hover:text-blue-100">About</a>
-            <a href="#" class="text-white hover:text-blue-100">Services</a>
+            <a href="#" class="text-white hover:text-blue-100">Features</a>
+            <a href="#" class="text-white hover:text-blue-100">Testimonials</a>
             <a href="#" class="text-white hover:text-blue-100">Contact</a>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container mx-auto mt-12">
-      <h1 class="font-bold text-3xl mb-6">Welcome to our modern site!</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section class="hero bg-blue-500 text-white pt-20 pb-32">
+      <div class="container mx-auto px-6">
+        <h1 class="font-bold text-4xl mb-6">Welcome to our amazing site!</h1>
+        <p class="text-lg mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+          odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+          quis sem at nibh elementum imperdiet.
+        </p>
+        <a
+          href="#"
+          class="bg-white text-blue-500 font-semibold px-6 py-2 rounded shadow-md hover:shadow-lg"
+          >Learn More</a
+        >
+      </div>
+    </section>
+
+    <section class="features container mx-auto mt-16 px-6">
+      <h2 class="font-bold text-3xl mb-12 text-center">Our Amazing Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Feature 1 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="font-semibold text-2xl mb-4">Feature 1</h2>
+          <div class="flex items-center justify-center mb-6">
+            <i class="fas fa-globe text-blue-500 text-4xl"></i>
+          </div>
+          <h3 class="font-semibold text-2xl mb-4">Global Reach</h3>
           <p class="text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
             odio.
           </p>
         </div>
+        <!-- Feature 2 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="font-semibold text-2xl mb-4">Feature 2</h2>
+          <div class="flex items-center justify-center mb-6">
+            <i class="fas fa-bolt text-blue-500 text-4xl"></i>
+          </div>
           <p class="text-gray-700">
             Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis
             sem at nibh elementum imperdiet.
           </p>
         </div>
+        <!-- Feature 3 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="font-semibold text-2xl mb-4">Feature 3</h2>
+          <div class="flex items-center justify-center mb-6">
+            <i class="fas fa-shield-alt text-blue-500 text-4xl"></i>
+          </div>
+          <h3 class="font-semibold text-2xl mb-4">Secure & Reliable</h3>
           <p class="text-gray-700">
             Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
             semper porta.
           </p>
         </div>
       </div>
-    </main>
+    </section>
+
+    <section class="testimonials bg-gray-100 py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="font-bold text-3xl mb-12 text-center">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 italic mb-6">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              nec odio. Praesent libero. Sed cursus ante dapibus diam."
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full mr-4"
+                src="https://via.placeholder.com/48"
+                alt="User Avatar"
+              />
+              <div>
+                <h4 class="font-semibold text-lg">John Doe</h4>
+                <p class="text-gray-500">CEO, Company</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 italic mb-6">
+              "Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
+              sagittis ipsum. Praesent mauris."
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full mr-4"
+                src="https://via.placeholder.com/48"
+                alt="User Avatar"
+              />
+              <div>
+                <h4 class="font-semibold text-lg">Jane Smith</h4>
+                <p class="text-gray-500">CTO, Another Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact container mx-auto mt-16 px-6">
+      <h2 class="font-bold text-3xl mb-12 text-center">Contact Us</h2>
+      <form class="w-full max-w-lg mx-auto">
+        <div class="flex flex-wrap mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-first-name"
+            >
+              First Name
+            </label>
+            <input
+              class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+              id="grid-first-name"
+              type="text"
+              placeholder="First Name"
+            />
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-last-name"
+            >
+              Last Name
+            </label>
+            <input
+              class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+              id="grid-last-name"
+              type="text"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap mb-6">
+          <div class="w-full px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-email"
+            >
+              Email
+            </label>
+            <input
+              class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+              id="grid-email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap mb-6">
+          <div class="w-full px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-message"
+            >
+              Message
+            </label>
+            <textarea
+              class="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+              id="grid-message"
+              placeholder="Your message..."
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full px-3">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
 
     <footer class="bg-gray-800 text-white mt-12 py-6">
       <div class="container mx-auto px-6 text-center">
