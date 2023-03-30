@@ -11,7 +11,5 @@
         "bradlc.vscode-tailwindcss"
       ]
     }
-  },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/personal/${localWorkspaceFolderBasename},type=bind",
-  "workspaceFolder": "/workspaces/personal/${localWorkspaceFolderBasename}"
+  }
 }

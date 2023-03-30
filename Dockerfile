@@ -37,7 +37,3 @@ ENV PATH="${DENO_INSTALL}/bin:${PATH}"
 # - Setup ----------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 RUN corepack enable
-WORKDIR /workspaces/personal/site
-RUN pnpm install
-
-# Stuff is out of order because I don't like losing my Docker cache.
