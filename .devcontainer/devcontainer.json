@@ -8,7 +8,9 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "astro-build.astro-vscode",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "github.copilot",
+        "eamodio.gitlens"
       ]
     }
   }
