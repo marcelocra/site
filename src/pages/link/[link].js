@@ -1,6 +1,6 @@
 const linkTable = new Map(
   Object.entries({
-    cv: "https://www.canva.com/design/DAFfJBLsVSs/ZwPgH-8mUYYqveOQHr6gSQ/edit?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    cv: "https://www.canva.com/design/DAFfJBLsVSs/bNFNumjdhWy4ZldHkvSKOQ/view?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
   })
 );
 
