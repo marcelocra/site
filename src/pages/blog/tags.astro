@@ -1,8 +1,12 @@
 ---
 import Site from "../../layouts/Site.astro";
+import { isHiddenPage } from "./_helper";
 
+// Fetch all tags.
 const tags = (await Astro.glob("./*.{md,mdx}"))
-  .filter((post) => !post.url.replace("/blog/", "").startsWith("_"))
+  // Filter out hidden posts.
+  .filter((post) => !isHiddenPage(post.url))
+  // Merge all their tags together.
   .flatMap((post) => post.frontmatter.tags);
 
 const uniqueTags = Array.from(new Set<string>(tags));

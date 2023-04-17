@@ -1,15 +1,18 @@
 ---
 import PostSummary from "../../components/PostSummary.astro";
 import Site from "../../layouts/Site.astro";
+import { isHiddenPage } from "./_helper";
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
+// Fetch all posts.
 const posts = (await Astro.glob("./*.{md,mdx}"))
+  // Filter out hidden posts.
+  .filter((post) => !isHiddenPage(post.url))
+  // Sort them by publication date.
   .sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -
       new Date(a.frontmatter.pubDate).valueOf()
-  )
-  .filter((post) => !post.frontmatter.draft);
+  );
 ---
 
 <Site>
