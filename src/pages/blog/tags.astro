@@ -2,10 +2,7 @@
 import Site from "../../layouts/Site.astro";
 
 const tags = (await Astro.glob("./*.{md,mdx}"))
-  .filter(
-    // We want to show drafts in dev env only.
-    (post) => process.env.NODE_ENV === "development" || !post.frontmatter.draft
-  )
+  .filter((post) => !post.url.replace("/blog/", "").startsWith("_"))
   .flatMap((post) => post.frontmatter.tags);
 
 const uniqueTags = Array.from(new Set<string>(tags));
@@ -16,8 +13,12 @@ const uniqueTags = Array.from(new Set<string>(tags));
     <hr
       class="w-full border-transparent border border-b-[#e9e9e9] opacity-20"
     />
-    <div class="grid grid-cols-12">
-      {uniqueTags.map((tag) => <div>{tag}</div>)}
+    <div class="flex flex-wrap gap-y-1 gap-x-2">
+      {
+        uniqueTags.map((tag) => (
+          <div class="text-black bg-slate-300 rounded-md px-1 py-0">{tag}</div>
+        ))
+      }
     </div>
   </div>
 </Site>
