@@ -1,16 +1,26 @@
 {
   "name": "Existing Dockerfile",
-  "context": "..",
-  "dockerFile": "../Dockerfile",
+  "image": "marcelocra/dev-container:2023.07.10",
+
+  // // Replace the above line by these ones to use the provided Dockerfile.
+  // "context": "..",
+  // "dockerFile": "../Dockerfile",
+
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "GitHub.vscode-pull-request-github",
         "astro-build.astro-vscode",
+        "bierner.lit-html",
         "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
         "github.copilot",
-        "eamodio.gitlens"
+        "runem.lit-plugin",
+        "styled-components.vscode-styled-components",
+        "svelte.svelte-vscode"
       ]
     }
   }

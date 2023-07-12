@@ -1,9 +1,16 @@
 {
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": false,
+  "proseWrap": "always",
+
   "overrides": [
     {
       "files": "*.md",
       "options": {
-        "proseWrap": "always"
+        "proseWrap": "always",
+        "useTabs": false,
+        "tabWidth": 2
       }
     }
   ]
