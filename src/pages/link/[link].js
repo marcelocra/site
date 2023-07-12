@@ -5,6 +5,7 @@ const linkTable = new Map(
     whatsapp: "https://wa.me/5531971320866",
     vip: "https://docs.google.com/forms/d/e/1FAIpQLSeEvsAlYs96vbtXMNGPxGRTStibO9rn5TmLF9374HaKCt1c3g/viewform?usp=sf_link",
     nat: "https://drive.google.com/drive/folders/1I_l-RcVrzCwWHtwFgWKE-ZcKhrJbb2AP",
+    golink: "https://chrome.google.com/webstore/detail/utilit%C3%A1rios-do-navegador/ogcjbockplkkcapbcgengmebmpplmbnm",
   })
 );
 
