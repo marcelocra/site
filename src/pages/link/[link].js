@@ -1,23 +1,31 @@
-const linkTable = new Map(
-  Object.entries({
-    cv: "https://www.canva.com/design/DAFfJBLsVSs/bNFNumjdhWy4ZldHkvSKOQ/view?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
-    linkedin: "https://www.linkedin.com/in/marcelocra",
-    whatsapp: "https://wa.me/5531971320866",
-    vip: "https://docs.google.com/forms/d/e/1FAIpQLSeEvsAlYs96vbtXMNGPxGRTStibO9rn5TmLF9374HaKCt1c3g/viewform?usp=sf_link",
-    nat: "https://drive.google.com/drive/folders/1I_l-RcVrzCwWHtwFgWKE-ZcKhrJbb2AP",
-  })
-);
+import links from './_links.js'
 
-export async function get({ params, redirect }) {
-  const link = params.link;
+const linkTable = new Map(links)
 
-  let url = linkTable.get(link);
-  if (url) {
-    return redirect(url, 302);
+export async function get({ params, request, redirect }) {
+  const link = params.link
+  const url = new URL(request.url)
+
+  const search = new URLSearchParams(url.search)
+  const hasShow = search.has('show') || search.has('s')
+
+  let urlForPath = linkTable.get(link)
+
+  if (hasShow) {
+    return new Response(urlForPath, {
+      status: 200,
+      headers: {
+        'content-type': 'text/plain',
+      },
+    })
+  }
+
+  if (urlForPath) {
+    return redirect(urlForPath, 302)
   }
 
   return new Response(null, {
     status: 404,
-    statusText: "Not found",
-  });
+    statusText: 'Not found',
+  })
 }
