@@ -6,4 +6,6 @@ export default Object.entries({
   nat: 'https://drive.google.com/drive/folders/1I_l-RcVrzCwWHtwFgWKE-ZcKhrJbb2AP',
   golink:
     'https://chrome.google.com/webstore/detail/utilit%C3%A1rios-do-navegador/ogcjbockplkkcapbcgengmebmpplmbnm',
+  'nat-abraco': 'https://drive.google.com/drive/folders/1dNjodqb10tB2Il3F1POGGitdxUNbVcn-?usp=sharing',
+  'nat-espiral': 'https://drive.google.com/drive/folders/1joobJBSumM-kX_f3EH56yfDWHT7bAsTI',
 })
