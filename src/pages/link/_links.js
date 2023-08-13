@@ -8,4 +8,5 @@ export default Object.entries({
     'https://chrome.google.com/webstore/detail/utilit%C3%A1rios-do-navegador/ogcjbockplkkcapbcgengmebmpplmbnm',
   'nat-abraco': 'https://drive.google.com/drive/folders/1dNjodqb10tB2Il3F1POGGitdxUNbVcn-?usp=sharing',
   'nat-espiral': 'https://drive.google.com/drive/folders/1joobJBSumM-kX_f3EH56yfDWHT7bAsTI',
+  acer: 'https://drive.google.com/drive/folders/13FPEvt2FaOJ_XUQSWD72epgkrftl5DhN?usp=sharing',
 })
