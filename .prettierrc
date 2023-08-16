@@ -4,6 +4,8 @@
   "semi": false,
   "proseWrap": "always",
 
+  "plugins": ["prettier-plugin-astro"],
+
   "overrides": [
     {
       "files": "*.md",
@@ -11,6 +13,12 @@
         "proseWrap": "always",
         "useTabs": false,
         "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
       }
     }
   ]

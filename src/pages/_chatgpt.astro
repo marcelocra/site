@@ -1,11 +1,5 @@
 ---
-const isProduction = process.env.NODE_ENV === "production";
-if (isProduction && $astro.isPage) {
-  return new Response(null, {
-    status: 404,
-    statusText: "Not found",
-  });
-}
+
 ---
 
 <!DOCTYPE html>
