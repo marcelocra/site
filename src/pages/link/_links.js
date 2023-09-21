@@ -9,4 +9,6 @@ export default Object.entries({
   'nat-abraco': 'https://drive.google.com/drive/folders/1dNjodqb10tB2Il3F1POGGitdxUNbVcn-?usp=sharing',
   'nat-espiral': 'https://drive.google.com/drive/folders/1joobJBSumM-kX_f3EH56yfDWHT7bAsTI',
   acer: 'https://drive.google.com/drive/folders/13FPEvt2FaOJ_XUQSWD72epgkrftl5DhN?usp=sharing',
+  requisitos: 'https://docs.google.com/document/d/1GfjeMcqlhXoEpU152B7pe8SE-r9Z8_wDcXdpcERVHsk/edit?usp=sharing',
+  aptos: 'https://docs.google.com/document/d/1GfjeMcqlhXoEpU152B7pe8SE-r9Z8_wDcXdpcERVHsk/edit?usp=sharing',
 })
