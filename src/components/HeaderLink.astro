@@ -1,18 +1,18 @@
 ---
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
 
-import "../styles/_constants.scss";
+import '../styles/_constants.scss'
 
-const { href, class: className, ...props } = Astro.props;
+const { href, class: className, ...props } = Astro.props
 
-const url = Astro.url.pathname.replace(/\/$/, "");
-const isActive = href === url || (href === "/" && url === "");
+const url = Astro.url.pathname.replace(/\/$/, '')
+const isActive = href === url || (href === '/' && url === '')
 ---
 
 <a
   href={href}
   class:list={[
-    "text-[color:var(--primary-color)]",
+    'text-[color:var(--primary-color)]',
     className,
     { active: isActive },
   ]}
