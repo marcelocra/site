@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Aprendendo liguagens de programação (funcionais?) no Exercism
 description: >
   Uma forma bem interessante de aprender linguagens de programação.

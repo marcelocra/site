@@ -1,31 +1,17 @@
 ---
-import { lang } from "../lib/constants";
-import Site from "./Site.astro";
+import { getCollection } from 'astro:content'
+import Post from './Post.astro'
 
-import "./Post.scss";
-
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    updatedDate?: string;
-    heroImage?: string;
-  };
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('posts')
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
 }
 
-const {
-  content: { title, pubDate, updatedDate, heroImage },
-} = Astro.props;
-
-function stringDateToDate(date?: string) {
-  return new Date(Date.parse(date ?? "")).toLocaleDateString(lang);
-}
-
-const pubDateAsDate = stringDateToDate(pubDate);
-const updatedDateAsDate = updatedDate
-  ? stringDateToDate(updatedDate)
-  : undefined;
+const { entry } = Astro.props
+const { Content } = await entry.render()
 ---
 
 <Site>
@@ -36,7 +22,7 @@ const updatedDateAsDate = updatedDate
       {
         pubDateAsDate && (
           <span class="text-sm text-gray-500">
-            Publicado: <time>{pubDateAsDate}</time>{" "}
+            Publicado: <time>{pubDateAsDate}</time>{' '}
             {updatedDateAsDate && (
               <span>
                 <i>

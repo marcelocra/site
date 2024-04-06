@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: A melhor forma de gerenciar múltiplos usuários do GitHub pelo Git
 description: >
   Depois de um tempo procurando uma boa forma de lidar com múltiplos usuários do

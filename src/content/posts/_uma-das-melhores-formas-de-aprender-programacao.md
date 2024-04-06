@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Uma das melhores formas de aprender programação
 description: >
   Por que o Exercism é uma das melhores formas de aprender programação

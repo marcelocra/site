@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Como markdown será renderizado nesse tema
 description: >
   (Nota: esse artigo está em inglês porque já veio com o template. Deixei aqui

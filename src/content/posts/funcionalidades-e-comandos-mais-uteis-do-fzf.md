@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Funcionalidades e comandos mais úteis do fzf
 description: >
   Para quem não conhece, [`fzf`](https://github.com/junegunn/fzf) é uma

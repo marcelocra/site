@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Será que TypeScript é sempre a melhor solução?
 description: >
   Recentemente, enquanto fuçava na codebase do [Svelte

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Hello Deno, goodbye node_modules!
 description: >
   [Deno](https://deno.land) é um projeto bem interessante! Só de não ter

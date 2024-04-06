@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Exemplo de post
 author: Marcelo Almeida
 description: >

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Como melhorar o setup inicial de uma máquina com Linux?
 description: >
   Provavelmente a primeira vez que eu usei Linux foi em 2012. Na época eu estava

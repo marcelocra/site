@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Post.astro
 title: Alterne entre projetos rapidamente
 description: >
   Ainda que `cd` seja um jeito muito fácil de mover entre projetos, dá pra fazer
