@@ -141,77 +141,77 @@ declare module 'astro:content' {
   slug: "alterne-rapidamente-entre-projetos";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "aprendendo-linguagens-de-programacao-no-exercism.md": {
 	id: "aprendendo-linguagens-de-programacao-no-exercism.md";
   slug: "aprendendo-linguagens-de-programacao-no-exercism";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "deno.md": {
 	id: "deno.md";
   slug: "deno";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "funcionalidades-e-comandos-mais-uteis-do-fzf.md": {
 	id: "funcionalidades-e-comandos-mais-uteis-do-fzf.md";
   slug: "funcionalidades-e-comandos-mais-uteis-do-fzf";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "git-multiplos-usuarios.md": {
 	id: "git-multiplos-usuarios.md";
   slug: "git-multiplos-usuarios";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "hello-world.md": {
 	id: "hello-world.md";
   slug: "hello-world";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "markdown-style-guide.md": {
 	id: "markdown-style-guide.md";
   slug: "markdown-style-guide";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "melhorar-setup-inicial-do-linux.md": {
 	id: "melhorar-setup-inicial-do-linux.md";
   slug: "melhorar-setup-inicial-do-linux";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "typescript-para-todas-as-situacoes.md": {
 	id: "typescript-para-todas-as-situacoes.md";
   slug: "typescript-para-todas-as-situacoes";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "usando-git-lfs-com-git-credential-manager.md": {
 	id: "usando-git-lfs-com-git-credential-manager.md";
   slug: "usando-git-lfs-com-git-credential-manager";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "using-mdx.mdx": {
 	id: "using-mdx.mdx";
   slug: "using-mdx";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".mdx"] };
 };
 
@@ -223,5 +223,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../src/content/config.js");
 }

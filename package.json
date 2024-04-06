@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro build && deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "astro": "astro",
-    "recognize-new-schema": "astro sync"
+    "sync": "astro sync"
   },
   "dependencies": {
     "@astrojs/deno": "^5.0.1",
