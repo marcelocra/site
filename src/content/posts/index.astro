@@ -1,18 +1,15 @@
 ---
-import PostSummary from "../../components/PostSummary.astro";
-import Site from "../../layouts/Site.astro";
-import { isHiddenPage } from "./_helper";
+import PostSummary from '../../components/PostSummary.astro'
+import Site from '../../layouts/Site.astro'
 
 // Fetch all posts.
-const posts = (await Astro.glob("./*.{md,mdx}"))
-  // Filter out hidden posts.
-  .filter((post) => !isHiddenPage(post.url))
+const posts = (await Astro.glob('./*.{md,mdx}'))
   // Sort them by publication date.
   .sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-  );
+      new Date(a.frontmatter.pubDate).valueOf(),
+  )
 ---
 
 <Site>
