@@ -1,11 +1,8 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
     "astro-build.astro-vscode",
-    "bradlc.vscode-tailwindcss",
-    "github.copilot",
-    "eamodio.gitlens"
+    "svelte.svelte-vscode",
+    "bradlc.vscode-tailwindcss"
   ],
   "unwantedRecommendations": []
 }
