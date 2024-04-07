@@ -1,12 +1,7 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
-import Avatar from "../components/Avatar.astro";
-import Footer from "../components/Footer.astro";
-
 import "../styles/global.css";
-
-const { pageTitle } = Astro.props;
+import SmallScreens from "../components/SmallScreens.astro";
+import LargeScreens from "../components/LargeScreens.astro";
 ---
 
 <html lang="en" class="bg-slate-200 dark:bg-slate-700">
@@ -19,52 +14,33 @@ const { pageTitle } = Astro.props;
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <title>{pageTitle}</title>
-    <ViewTransitions />
+    <title>Marcelo Almeida | Home</title>
     <style>
-      .smaller-screens {
+      .small-screens {
         display: block;
       }
-      .larger-screens {
+      .large-screens {
         display: none;
       }
 
       @media (min-width: 430px) {
-        .smaller-screens {
+        .small-screens {
           display: none;
         }
 
-        .larger-screens {
+        .large-screens {
           display: block;
         }
       }
     </style>
   </head>
   <body>
-    <!-- smaller screens -->
-    <div class="smaller-screens">
-      <div class="min-h-screen p-3 flex flex-col gap-3 justify-between">
-        <div class="flex flex-row gap-3">
-          <Avatar class="rounded-full w-16 border border-black" />
-          <div class="text-xs">marcelo description</div>
-        </div>
-
-        <Footer />
-      </div>
+    <div class="small-screens">
+      <SmallScreens />
     </div>
 
-    <!-- larger screens -->
-    <div class="larger-screens">
-      <div class="grid grid-cols-4 p-3">
-        <div>
-          <div>
-            <Avatar class="rounded-full w-48 border border-black" />
-            <div class="">marcelo description</div>
-          </div>
-          <Footer />
-        </div>
-        <div>center content</div>
-      </div>
+    <div class="large-screens">
+      <LargeScreens />
     </div>
   </body>
 </html>
