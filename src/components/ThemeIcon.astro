@@ -38,6 +38,25 @@
 </style>
 
 <script>
+  // To avoid having the light theme flashing when content is swapping, the
+  // documentation states the following:
+  //
+  //     The theme toggle works on every page, but its script is loaded at the
+  //     end of the navigation process, after the new page has fully loaded in
+  //     the browser. There may be a flash of the light theme version of the
+  //     site before this theme toggle script runs and checks which theme it
+  //     should use on the page.
+  //
+  //     To check for, and if necessary set, dark mode earlier in the navigation
+  //     process, create a function that will run in response to the
+  //     astro:after-swap event. The following function to check the browser’s
+  //     localStorage for dark theme will run immediately after the new page has
+  //     replaced the old page, before the DOM elements are painted to the
+  //     screen.
+  //
+  //     Source: https://docs.astro.build/en/tutorials/add-view-transitions/
+  //     (Search for "prevent flashing in dark mode")
+
   document.addEventListener("astro:after-swap", () => {
     localStorage.theme === "dark"
       ? document.documentElement.classList.add("dark")
