@@ -1,17 +1,12 @@
 ---
-import Social from "./Social.astro";
+import { LINK_STYLE } from "../libs/constants";
+
+const linkStyle = LINK_STYLE + " font-bold text-xs";
 ---
 
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+<footer class="flex flex-row gap-3 justify-center">
+  <a class={linkStyle} href="https://www.github.com/marcelocra/">GitHub</a>
+  <a class={linkStyle} href="https://www.linkedin.com/in/marcelocra/"
+    >LinkedIn</a
+  >
 </footer>
-
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
