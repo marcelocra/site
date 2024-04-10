@@ -3,7 +3,9 @@ const today = new Date();
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Marcelo Almeida. All rights reserved.
+  &copy; {today.getFullYear()} Marcelo Almeida. All rights reserved. Powered by <a
+    href="https://astro.build">Astro</a
+  >.
   <div class="social-links">
     <!-- <a href="https://mastodon.social/@marcelocra" target="_blank">
       <span class="sr-only">Follow me on Mastodon (I don't really use...)</span>
@@ -22,6 +24,7 @@ const today = new Date();
     <a href="https://github.com/marcelocra" target="_blank">
       <span class="sr-only">Go to my GitHub repo</span>
       <svg
+        class="transform scale-90"
         viewBox="0 0 16 16"
         aria-hidden="true"
         width="32"
