@@ -1,20 +1,11 @@
-import rss, { pagesGlobToRssItems } from "@astrojs/rss";
-import { DESCRIPTION, TITLE } from "../libs/constants";
-import { getCollection } from "astro:content";
+import rss, { pagesGlobToRssItems } from '@astrojs/rss'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 
-export async function GET(context) {
-  const posts = await getCollection("posts");
-
+export async function get(context) {
   return rss({
-    title: TITLE,
-    description: DESCRIPTION,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     site: context.site,
-    items: posts.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.pubDate,
-      description: post.data.description,
-      link: `/posts/${post.slug}/`,
-    })),
-    customData: `<language>pt-br</language>`,
-  });
+    items: await pagesGlobToRssItems(import.meta.glob('./blog/[^_]*.{md,mdx}')),
+  })
 }

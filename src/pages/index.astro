@@ -1,46 +1,90 @@
 ---
-import "../styles/global.css";
-import SmallScreens from "../components/SmallScreens.astro";
-import LargeScreens from "../components/LargeScreens.astro";
+
+const SECTIONS: {
+  title: string;
+  description: string;
+  props: { [key: string]: string };
+}[] = [
+  {
+    title: "Blog",
+    description:
+      "Aprenda sobre design de software, programação, ferramentas de desenvolvimento e produtividade, e muito mais.",
+    props: {
+      href: "/blog",
+    },
+  },
+  {
+    title: "GitHub",
+    description: "Meus projetos de programação.",
+    props: {
+      href: "https://github.com/marcelocra",
+    },
+  },
+  {
+    title: "Twitter",
+    description:
+      "Um dos principais lugares para conhecer novas tecnologias e práticas que estão sendo consolidadas nas comunidades.",
+    props: {
+      href: "https://twitter.com/marcelo_cra",
+    },
+  },
+  {
+    title: "Mastodon",
+    description:
+      "Será que o Twitter vai continuar existindo por muito tempo? Se não, vou estar por aqui.",
+    props: {
+      rel: "me",
+      href: "https://mastodon.social/@marcelocra",
+    },
+  },
+  {
+    title: "YouTube",
+    description: "Aprenda sobre os mesmos tópicos do blog, porém em vídeo!",
+    props: {
+      title: "Em construção",
+      role: "link",
+      "aria-disabled": "true",
+    },
+  },
+  {
+    title: "Newsletter (email)",
+    description:
+      "Fique por dentro de tudo que acontece no mundo do desenvolvimento! Saiba sobre novos artigos, blogs, vídeos e mais.",
+    props: {
+      title: "Em construção",
+      role: "link",
+      "aria-disabled": "true",
+    },
+  },
+];
 ---
 
-<html lang="en" class="bg-slate-200 dark:bg-slate-700">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <title>Marcelo Almeida | Home</title>
-    <style>
-      .small-screens {
-        display: block;
-      }
-      .large-screens {
-        display: none;
-      }
-
-      @media (min-width: 430px) {
-        .small-screens {
-          display: none;
-        }
-
-        .large-screens {
-          display: block;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="small-screens">
-      <SmallScreens />
+<Site>
+  <div class="grid grid-cols-1 gap-3 md:gap-5" slot="main">
+    <div class="px-3 md:px-0 text-center">
+      Olá! Meu nome é <strong>Marcelo</strong>, sou Engenheiro de Computação e
+      trabalho com <strong>design e desenvolvimento de software</strong>. Aqui
+      você pode conferir meus projetos e mídias.
     </div>
-
-    <div class="large-screens">
-      <LargeScreens />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {
+        SECTIONS.map((section) => (
+          <a
+            class={`rounded-md no-underline p-3 ${
+              section.props.href
+                ? "rounded-md no-underline p-3 hover:bg-[color:var(--primary-color)] text-white hover:text-black"
+                : "cursor-not-allowed text-gray-500"
+            }`}
+            style="border: 1px solid var(--my-gray)"
+            {...section.props}
+          >
+            {section.title && (
+              <div class="text-xl font-bold">{section.title}</div>
+            )}
+            {section.description && <div>{section.description}</div>}
+          </a>
+        ))
+      }
     </div>
-  </body>
-</html>
+  </div>
+</Site>
