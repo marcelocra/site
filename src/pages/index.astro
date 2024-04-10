@@ -1,90 +1,74 @@
 ---
-
-const SECTIONS: {
-  title: string;
-  description: string;
-  props: { [key: string]: string };
-}[] = [
-  {
-    title: "Blog",
-    description:
-      "Aprenda sobre design de software, programação, ferramentas de desenvolvimento e produtividade, e muito mais.",
-    props: {
-      href: "/blog",
-    },
-  },
-  {
-    title: "GitHub",
-    description: "Meus projetos de programação.",
-    props: {
-      href: "https://github.com/marcelocra",
-    },
-  },
-  {
-    title: "Twitter",
-    description:
-      "Um dos principais lugares para conhecer novas tecnologias e práticas que estão sendo consolidadas nas comunidades.",
-    props: {
-      href: "https://twitter.com/marcelo_cra",
-    },
-  },
-  {
-    title: "Mastodon",
-    description:
-      "Será que o Twitter vai continuar existindo por muito tempo? Se não, vou estar por aqui.",
-    props: {
-      rel: "me",
-      href: "https://mastodon.social/@marcelocra",
-    },
-  },
-  {
-    title: "YouTube",
-    description: "Aprenda sobre os mesmos tópicos do blog, porém em vídeo!",
-    props: {
-      title: "Em construção",
-      role: "link",
-      "aria-disabled": "true",
-    },
-  },
-  {
-    title: "Newsletter (email)",
-    description:
-      "Fique por dentro de tudo que acontece no mundo do desenvolvimento! Saiba sobre novos artigos, blogs, vídeos e mais.",
-    props: {
-      title: "Em construção",
-      role: "link",
-      "aria-disabled": "true",
-    },
-  },
-];
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Image } from "astro:assets";
+import profile from "../assets/profile.webp";
 ---
 
-<Site>
-  <div class="grid grid-cols-1 gap-3 md:gap-5" slot="main">
-    <div class="px-3 md:px-0 text-center">
-      Olá! Meu nome é <strong>Marcelo</strong>, sou Engenheiro de Computação e
-      trabalho com <strong>design e desenvolvimento de software</strong>. Aqui
-      você pode conferir meus projetos e mídias.
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-      {
-        SECTIONS.map((section) => (
-          <a
-            class={`rounded-md no-underline p-3 ${
-              section.props.href
-                ? "rounded-md no-underline p-3 hover:bg-[color:var(--primary-color)] text-white hover:text-black"
-                : "cursor-not-allowed text-gray-500"
-            }`}
-            style="border: 1px solid var(--my-gray)"
-            {...section.props}
-          >
-            {section.title && (
-              <div class="text-xl font-bold">{section.title}</div>
-            )}
-            {section.description && <div>{section.description}</div>}
-          </a>
-        ))
-      }
-    </div>
-  </div>
-</Site>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <h1>
+        <Image
+          class="rounded-full w-10 h-10"
+          src={profile}
+          alt="marcelo's picture looking at the screen"
+        />
+        Hello, fellow human
+        <p>
+          Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
+          template. This template serves as a lightweight, minimally-styled starting
+          point for anyone looking to build a personal website, blog, or portfolio
+          with Astro.
+        </p>
+        <p>
+          This template comes with a few integrations already configured in your
+          <code>astro.config.mjs</code> file. You can customize your setup with
+          <a href="https://astro.build/integrations">Astro Integrations</a> to add
+          tools like Tailwind, React, or Vue to your project.
+        </p>
+        <p>Here are a few ideas on how to get started with the template:</p>
+        <ul>
+          <li>Edit this page in <code>src/pages/index.astro</code></li>
+          <li>
+            Edit the site header items in <code
+              >src/components/Header.astro</code
+            >
+          </li>
+          <li>
+            Add your name to the footer in <code
+              >src/components/Footer.astro</code
+            >
+          </li>
+          <li>
+            Check out the included blog posts in <code>src/pages/blog/</code>
+          </li>
+          <li>
+            Customize the blog post page layout in <code
+              >src/layouts/BlogPost.astro</code
+            >
+          </li>
+        </ul>
+        <p>
+          Have fun! If you get stuck, remember to <a
+            href="https://docs.astro.build/"
+            >read the docs
+          </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask
+          questions.
+        </p>
+        <p>
+          Looking for a blog template with a bit more personality? Check out <a
+            href="https://github.com/Charca/astro-blog-template"
+            >astro-blog-template
+          </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+        </p>
+      </h1>
+      <Footer />
+    </main>
+  </body>
+</html>
