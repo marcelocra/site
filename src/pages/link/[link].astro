@@ -1,0 +1,23 @@
+---
+import links from "./_links";
+
+export function getStaticPaths() {
+  return Array.from(links.keys()).map((link) => ({ params: { link } }));
+}
+
+const { link } = Astro.params;
+const redirectTo = links.get(link);
+---
+
+<div id="show"></div>
+
+<script is:inline define:vars={{ redirectTo }}>
+  const search = new URLSearchParams(window.location.search);
+  const hasShow = search.has("show") || search.has("s");
+
+  if (hasShow) {
+    document.getElementById("show").textContent = redirectTo;
+  } else {
+    window.location.replace(redirectTo);
+  }
+</script>
