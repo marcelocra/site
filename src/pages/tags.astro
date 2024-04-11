@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const tags = (await getCollection("blog"))
+  // Merge all their tags together.
+  .flatMap((post) => post.data.tags)
+  .filter((tag) => tag !== null && tag !== undefined && tag !== "");
+
+const countTags: Record<string, number> = tags.reduce((acc, tag) => {
+  // @ts-ignore - we check for undefined above.
+  acc[tag] = acc[tag] ? acc[tag] + 1 : 1;
+  return acc;
+}, {});
+---
+
+<BaseLayout>
+  <main>
+    <h1>Tags</h1>
+    <div class="flex flex-wrap gap-3 justify-evenly">
+      {
+        Object.entries(countTags).map(([tag, count]) => (
+          <div class="badge badge-neutral">
+            {tag}: {count}
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>
