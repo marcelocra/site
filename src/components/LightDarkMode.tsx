@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import scream from "./WilhelmScream.ogg";
 
+const commonClasses =
+  "w-6 h-6 text-[color:rgb(var(--gray))] hover:text-[color:rgb(var(--gray-dark))] stroke-[1.8]";
+
 function Sun() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className={commonClasses}
     >
       <path
         strokeLinecap="round"
@@ -26,9 +28,8 @@ function Moon() {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className={commonClasses}
     >
       <path
         strokeLinecap="round"
@@ -79,15 +80,19 @@ export default function LightDarkMode() {
   };
 
   return (
-    <button onClick={handleToggleClick}>
-      {mode === "light" ? <Sun /> : <Moon />}
-      <audio
-        ref={audioRef}
-        className="hidden"
-        id="audio"
-        src={scream}
-        controls
-      ></audio>
-    </button>
+    <div
+      className="tooltip tooltip-left flex"
+      data-tip="Prepare for the scream..."
+    >
+      <button onClick={handleToggleClick}>
+        {mode === "light" ? <Sun /> : <Moon />}
+        <audio
+          ref={audioRef}
+          className="hidden"
+          id="audio"
+          src={scream}
+        ></audio>
+      </button>
+    </div>
   );
 }
