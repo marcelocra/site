@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+pnpm run build
+
 (cd dist \
   && deployctl deploy \
      --project=marcelocra \
