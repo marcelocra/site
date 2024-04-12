@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import profile from "../assets/profile.webp";
 
 const SECTIONS: {
   title: string;
@@ -65,9 +63,9 @@ const SECTIONS: {
 <BaseLayout>
   <main>
     <div class="flex flex-col gap-3 justify-center items-center">
-      <Image
+      <img
         class="max-w-40 h-auto rounded-full"
-        src={profile}
+        src="/profile.webp"
         alt="Marcelo sorrindo"
       />
       <div class="text-center">
