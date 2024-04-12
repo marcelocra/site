@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-(cd public \
+(cd dist \
   && deployctl deploy \
-     --project=simple-site \
+     --project=marcelocra \
      https://deno.land/std@0.220.0/http/file_server.ts)
