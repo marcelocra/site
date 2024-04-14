@@ -1,4 +1,6 @@
-funcionalidade que quero:
+todo:
 
-- main page about me
-- link redirect
+- [ ] strings en and pt-br
+- [x] main page
+- [x] about me
+- [x] link redirect
