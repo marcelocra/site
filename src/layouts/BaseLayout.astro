@@ -12,7 +12,9 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
-    <slot />
+    <div class="max-w-[1440px] mx-auto">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

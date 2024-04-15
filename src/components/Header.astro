@@ -6,7 +6,9 @@ import { t } from "../lib/i18n/t";
 ---
 
 <header>
-  <nav class="flex flex-row items-center justify-between">
+  <nav
+    class="flex flex-row items-center justify-between max-w-[1440px] mx-auto"
+  >
     <a href="/">{SITE_TITLE}</a>
     <div>
       <HeaderLink href="/">{t("home")}</HeaderLink>
@@ -29,21 +31,21 @@ import { t } from "../lib/i18n/t";
   h2 a.active {
     text-decoration: none;
   }
-  nav {
+  header {
     background-color: var(--default-bg-color);
     color: var(--default-text-color);
   }
-  nav a {
+  header a {
     padding: 1em 0.5em;
     color: var(--default-text-color);
     border-bottom: 4px solid transparent;
     text-decoration: none;
   }
-  nav a.active {
+  header a.active {
     text-decoration: none;
     border-bottom-color: #090909;
   }
-  nav a:hover {
+  header a:hover {
     color: #f5f5f5;
   }
 </style>

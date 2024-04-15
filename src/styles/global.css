@@ -40,7 +40,6 @@
 
 body {
   font-family: "Atkinson", sans-serif;
-  margin: 0;
   padding: 0;
   text-align: left;
   background: linear-gradient(var(--gray-gradient)) no-repeat;
@@ -50,9 +49,6 @@ body {
   color: rgb(var(--gray-dark));
   font-size: 20px;
   line-height: 1.7;
-
-  /* My styles. */
-  max-width: 1440px;
 }
 
 main {
