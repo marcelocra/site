@@ -6,12 +6,15 @@ export function setLocale(locale: string) {
   preferredLocale = locale;
 }
 
+export function getLocale() {
+  return preferredLocale;
+}
+
 /**
  * @param id The identifier used for this string in the string file for one particular locale.
  */
-export function t(id: string) {
-  const strings = import(`./strings/${preferredLocale}.js`);
+export async function t(id: string) {
+  const { default: strings } = await import(`./strings/${preferredLocale}.js`);
 
-  // @ts-ignore
   return strings[id] ?? "not there";
 }

@@ -1,15 +1,12 @@
 import { defaultLocale } from "../../consts";
-import { setLocale } from "./t";
+import { getLocale } from "./t";
 
-export function prepareInternalUrl(
-  currentLocale: string,
-  pathFromIndex: string
-) {
-  setLocale(currentLocale);
+export function prepareInternalUrl(pathFromIndex: string) {
+  let locale = getLocale() ?? defaultLocale;
 
-  if (currentLocale === defaultLocale) {
+  if (locale === defaultLocale) {
     return pathFromIndex;
   }
 
-  return `/${currentLocale}${pathFromIndex}`;
+  return `/${locale}${pathFromIndex}`;
 }
