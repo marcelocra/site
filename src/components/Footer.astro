@@ -4,7 +4,7 @@ import SocialLinks from "./SocialLinks.astro";
 const today = new Date();
 ---
 
-<footer>
+<footer class="bg-[#e9e9e9] dark:bg-slate-600 dark:text-white">
   <div>&copy; {today.getFullYear()} Marcelo Almeida. All rights reserved.</div>
   <div>Powered by <a href="https://astro.build">Astro</a>.</div>
   <div class="social-links">
@@ -14,8 +14,8 @@ const today = new Date();
 <style>
   footer {
     padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
+    /* background: linear-gradient(var(--gray-gradient)) no-repeat;
+    color: rgb(var(--gray)); */
     text-align: center;
   }
   .social-links {
