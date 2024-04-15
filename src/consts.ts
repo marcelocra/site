@@ -4,3 +4,5 @@
 export const SITE_TITLE = "Marcelo Almeida";
 export const SITE_DESCRIPTION =
   "Seja bem vindo ao meu site pessoal! Aqui você encontra informações sobre mim e meus projetos.";
+
+export const defaultLocale = "pt-br";

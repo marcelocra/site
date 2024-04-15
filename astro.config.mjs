@@ -9,4 +9,11 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://marcelocra.dev",
   integrations: [mdx(), sitemap(), tailwind(), react()],
+  i18n: {
+    defaultLocale: "pt-br",
+    locales: ["pt-br", "en"],
+    fallback: {
+      en: "pt-br",
+    },
+  },
 });
