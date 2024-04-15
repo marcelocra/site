@@ -1,6 +1,4 @@
 ---
-import scream from "./WilhelmScream.ogg";
-
 const commonClasses =
   "w-6 h-6 text-[color:rgb(var(--gray))] hover:text-[color:rgb(var(--gray-dark))] stroke-[1.8] hidden";
 ---
@@ -38,22 +36,22 @@ const commonClasses =
         ></path>
       </svg>
     </button>
-    <audio class="hidden" src={scream}></audio>
   </div>
 </light-dark-toggle>
 
 <script>
   class LightDarkToggle extends HTMLElement {
     toggle = this.querySelector("button")!;
-    audio = this.querySelector("audio")!;
+    audio = new Audio("/WilhelmScream.ogg");
     sun = this.querySelector("#sun")!;
     moon = this.querySelector("#moon")!;
+    document = document.documentElement;
 
     constructor() {
       super();
 
-      this.toggle.addEventListener("click", this.handleToggleClick);
-
+      console.log(this.audio);
+      this.toggle.addEventListener("click", () => this.handleToggleClick());
       this.getOrSetInitialMode();
     }
 
@@ -83,10 +81,9 @@ const commonClasses =
     }
 
     handleToggleClick() {
-      const element = document.documentElement;
-      element.classList.toggle("dark");
+      document.documentElement.classList.toggle("dark");
 
-      const isDark = element.classList.contains("dark");
+      const isDark = document.documentElement.classList.contains("dark");
       const newTheme = isDark ? "dark" : "light";
       localStorage.setItem("theme", newTheme);
 
