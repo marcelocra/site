@@ -86,13 +86,8 @@ export default function LightDarkMode() {
     >
       <button onClick={handleToggleClick}>
         {mode === "light" ? <Sun /> : <Moon />}
-        <audio
-          ref={audioRef}
-          className="hidden"
-          id="audio"
-          src={scream}
-        ></audio>
       </button>
+      <audio ref={audioRef} className="hidden" id="audio" src={scream}></audio>
     </div>
   );
 }
