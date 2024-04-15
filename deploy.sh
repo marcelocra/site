@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-set -euo pipefail   
+# -e: exit on error
+# -u: exit on undefined variable
+# -o pipefail: exits on command pipe failures
+set -euo pipefail
 
 if [[ "$(pwd)" != "$MCRA_PROJECTS_FOLDER/site" ]]; then
   echo "You must run this script from the project root folder"
