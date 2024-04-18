@@ -16,5 +16,7 @@ export default new Map(
       "https://docs.google.com/document/d/1GfjeMcqlhXoEpU152B7pe8SE-r9Z8_wDcXdpcERVHsk/edit?usp=sharing",
     aptos:
       "https://docs.google.com/document/d/1GfjeMcqlhXoEpU152B7pe8SE-r9Z8_wDcXdpcERVHsk/edit?usp=sharing",
+    "spec-vs-schema":
+      "https://ask.clojure.org/index.php/13817/clojure-spec-vs-plumatic-schema",
   })
 );
