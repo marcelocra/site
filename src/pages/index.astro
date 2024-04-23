@@ -7,8 +7,14 @@ import Skills from "../components/index-sections/Skills.astro";
 
 <BaseLayout>
   <main class="flex flex-col gap-10">
-    <Hero />
-    <IconsAndStartProject />
-    <Skills />
+    <section class="grid grid-cols-2 mt-28">
+      <Hero />
+    </section>
+    <section class="grid grid-cols-3">
+      <IconsAndStartProject />
+    </section>
+    <section>
+      <Skills />
+    </section>
   </main>
 </BaseLayout>

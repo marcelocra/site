@@ -19,7 +19,9 @@ import SvgArrowHeadPointingRight from "./svgs/SvgArrowHeadPointingRight.astro";
 import SvgArrowHeadPointingLeft from "./svgs/SvgArrowHeadPointingLeft.astro";
 ---
 
-<section class="relative px-16 py-11">
+<div
+  class="relative px-16 py-11 bg-[#ecebe4] my-0 mx-auto w-[90%] rounded-lg my-shadow"
+>
   <div>
     <button id="toggle" class="absolute right-10 top-1/2">
       <div class="main">
@@ -57,17 +59,9 @@ import SvgArrowHeadPointingLeft from "./svgs/SvgArrowHeadPointingLeft.astro";
     </div>
     <SvgSpokenLanguageEnUs />
   </div>
-</section>
+</div>
 
 <style>
-  section {
-    background: #ecebe4;
-    box-shadow: 0px 3.41577px 3.41577px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    width: 90%;
-    margin: 0 auto;
-  }
-
   .main {
     display: grid;
   }
