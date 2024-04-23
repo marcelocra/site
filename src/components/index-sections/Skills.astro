@@ -1,10 +1,62 @@
 ---
 import { t } from "../../lib/i18n/t";
+
+import SvgJavaScript from "./svgs/SvgJavaScript.astro";
+import SvgTypeScript from "./svgs/SvgTypeScript.astro";
+import SvgReact from "./svgs/SvgReact.astro";
+import SvgAstro from "./svgs/SvgAstro.astro";
+import SvgNodejs from "./svgs/SvgNodejs.astro";
+import SvgClojure from "./svgs/SvgClojure.astro";
+import SvgFSharp from "./svgs/SvgFSharp.astro";
+import SvgPython from "./svgs/SvgPython.astro";
+import SvgProblemSolving from "./svgs/SvgProblemSolving.astro";
+import SvgDocumentation from "./svgs/SvgDocumentation.astro";
+import SvgAnalyticalThinking from "./svgs/SvgAnalyticalThinking.astro";
+import SvgCommunication from "./svgs/SvgCommunication.astro";
+import SvgSpokenLanguagePtBr from "./svgs/SvgSpokenLanguagePtBr.astro";
+import SvgSpokenLanguageEnUs from "./svgs/SvgSpokenLanguageEnUs.astro";
+import SvgArrowHeadPointingRight from "./svgs/SvgArrowHeadPointingRight.astro";
+import SvgArrowHeadPointingLeft from "./svgs/SvgArrowHeadPointingLeft.astro";
 ---
 
-<section class="px-16 py-11">
+<section class="relative px-16 py-11">
+  <div>
+    <button id="toggle" class="absolute right-10 top-1/2">
+      <div class="main">
+        <SvgArrowHeadPointingRight />
+      </div>
+      <div class="not-main">
+        <SvgArrowHeadPointingLeft />
+      </div>
+    </button>
+  </div>
   <h2 class="text-2xl font-bold">{t("skills.title")}</h2>
   <p>{t("skills.subtitle")}</p>
+
+  <div
+    class="main grid grid-cols-4 place-items-center gap-6 mt-3 w-[90%] mx-auto"
+  >
+    <SvgJavaScript />
+    <SvgTypeScript />
+    <SvgReact />
+    <SvgAstro />
+    <SvgNodejs />
+    <SvgClojure />
+    <SvgFSharp />
+    <SvgPython />
+  </div>
+  <div
+    class="not-main grid grid-cols-4 place-items-center gap-6 mt-3 w-[90%] mx-auto"
+  >
+    <SvgProblemSolving />
+    <SvgDocumentation />
+    <SvgAnalyticalThinking />
+    <SvgCommunication />
+    <div class="col-start-2">
+      <SvgSpokenLanguagePtBr />
+    </div>
+    <SvgSpokenLanguageEnUs />
+  </div>
 </section>
 
 <style>
@@ -15,4 +67,29 @@ import { t } from "../../lib/i18n/t";
     width: 90%;
     margin: 0 auto;
   }
+
+  .main {
+    display: grid;
+  }
+
+  .not-main {
+    display: none;
+  }
 </style>
+
+<script>
+  document.querySelector("button#toggle")?.addEventListener("click", () => {
+    const main = document.querySelectorAll(".main");
+    const notMain = document.querySelectorAll(".not-main");
+
+    main?.forEach((el) => {
+      el.classList.remove("main");
+      el.classList.add("not-main");
+    });
+
+    notMain?.forEach((el) => {
+      el.classList.add("main");
+      el.classList.remove("not-main");
+    });
+  });
+</script>
