@@ -1,8 +1,8 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
-import SocialLinks from "./SocialLinks.astro";
 import { t } from "../lib/i18n/t";
+import StartProjectButton from "./StartProjectButton.astro";
 ---
 
 <header class="bg-[#ECEBE4] p-5 shadow-xl">
@@ -18,11 +18,6 @@ import { t } from "../lib/i18n/t";
       <HeaderLink href="/projects">{t("projects")}</HeaderLink>
       <HeaderLink href="/blog">{t("blog")}</HeaderLink>
     </div>
-    <button class="btn bg-[#160033] text-white px-10 rounded-[10px]"
-      >{t("startProject")}</button
-    >
-    <div class="flex flex-row-reverse gap-3 px-5">
-      <SocialLinks />
-    </div>
+    <StartProjectButton />
   </nav>
 </header>

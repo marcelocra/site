@@ -1,97 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const SECTIONS: {
-  title: string;
-  description: string;
-  props: { [key: string]: string };
-}[] = [
-  {
-    title: "Blog",
-    description:
-      "Aprenda sobre design de software, programação, ferramentas de desenvolvimento e produtividade, e muito mais.",
-    props: {
-      href: "/blog",
-    },
-  },
-  {
-    title: "GitHub",
-    description: "Meus projetos de programação.",
-    props: {
-      href: "https://github.com/marcelocra",
-    },
-  },
-  {
-    title: "Twitter",
-    description:
-      "Um dos principais lugares para conhecer novas tecnologias e práticas que estão sendo consolidadas nas comunidades.",
-    props: {
-      href: "https://twitter.com/marcelo_cra",
-    },
-  },
-  {
-    title: "Mastodon",
-    description:
-      "Será que o Twitter vai continuar existindo por muito tempo? Se não, vou estar por aqui.",
-    props: {
-      rel: "me",
-      href: "https://mastodon.social/@marcelocra",
-    },
-  },
-  // {
-  //   title: "YouTube",
-  //   description: "Aprenda sobre os mesmos tópicos do blog, porém em vídeo!",
-  //   props: {
-  //     title: "Em construção",
-  //     role: "link",
-  //     "aria-disabled": "true",
-  //   },
-  // },
-  // {
-  //   title: "Newsletter (email)",
-  //   description:
-  //     "Fique por dentro de tudo que acontece no mundo do desenvolvimento! Saiba sobre novos artigos, blogs, vídeos e mais.",
-  //   props: {
-  //     title: "Em construção",
-  //     role: "link",
-  //     "aria-disabled": "true",
-  //   },
-  // },
-];
+import Hero from "../components/index-sections/Hero.astro";
+import IconsAndStartProject from "../components/index-sections/IconsAndStartProject.astro";
+import Skills from "../components/index-sections/Skills.astro";
 ---
 
 <BaseLayout>
-  <main>
-    <div class="flex flex-col gap-3 justify-center items-center">
-      <img
-        class="max-w-40 h-auto rounded-full"
-        src="/profile.webp"
-        alt="Marcelo sorrindo"
-      />
-      <div class="text-center">
-        Olá! Meu nome é <strong>Marcelo</strong>, sou Engenheiro de Computação e
-        trabalho com <strong>design e desenvolvimento de software</strong>. Aqui
-        você pode conferir meus projetos, meu blog ou entrar em contato.
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {
-          SECTIONS.map((section) => (
-            <a
-              class={`rounded-md no-underline p-3 border border-slate-400 ${
-                section.props.href
-                  ? "text-black hover:text-blue-600 hover:border-slate-600 hover:bg-slate-200"
-                  : "cursor-not-allowed border-gray-300 text-gray-300 hover:text-gray-300"
-              }`}
-              {...section.props}
-            >
-              {section.title && (
-                <div class="text-xl font-bold">{section.title}</div>
-              )}
-              {section.description && <div>{section.description}</div>}
-            </a>
-          ))
-        }
-      </div>
-    </div>
+  <main class="flex flex-col gap-10">
+    <Hero />
+    <IconsAndStartProject />
+    <Skills />
   </main>
 </BaseLayout>

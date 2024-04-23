@@ -1,0 +1,10 @@
+---
+import { t } from "../lib/i18n/t";
+
+const { outline = false } = Astro.props;
+---
+
+<button
+  class={`btn ${outline ? "btn-outline border-2 border-black" : "bg-[#160033] text-white"} px-10 rounded-[10px]`}
+  >{t("startProject")}</button
+>
