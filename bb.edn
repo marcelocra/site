@@ -1,0 +1,18 @@
+{:min-bb-version "1.3.188"
+
+ :tasks
+ {:requires ([babashka.fs :as fs]
+             [babashka.cli :as cli])
+
+  dev {:doc "Run these during development."
+       :task (run '-dev {:parallel true})}
+ 
+  -dev {:depends [-dev-cmd1 -dev-cmd2]}
+  -dev-cmd1 {:task (shell "echo 'Hello, world!'")}
+  -dev-cmd2 {:task (shell "pnpm run dev")}
+
+  ;; Next task above this line.
+ }
+ 
+ ;; Next bb setting above this line.
+}
