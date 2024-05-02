@@ -1,27 +1,34 @@
 ---
-import SocialLinks from "./SocialLinks.astro";
-
 const today = new Date();
 ---
 
-<footer>
-  <div>&copy; {today.getFullYear()} Marcelo Almeida. All rights reserved.</div>
-  <div>Powered by <a href="https://astro.build">Astro</a>.</div>
-  <div class="social-links">
-    <SocialLinks />
+<footer class="flex flex-col items-center bg-[var(--bg-bege)] px-1 py-1 pb-2">
+  <div class="flex flex-row justify-around w-full p-5">
+    <div class="text-sm">
+      <div><a class="link" href="/">Home</a></div>
+      <div><a class="link">Download CV</a></div>
+      <div><a class="link">Blog</a></div>
+    </div>
+    <div>
+      <div class="font-bold">Contact</div>
+      <div>marcelocralmeida@gmail.com</div>
+      <div>
+        <a class="link" href="tel:+5531971320866">Phone</a> | <a
+          class="link"
+          href="https://wa.me/5531971320866">WhatsApp</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div>&copy; Marcelo Almeida | {today.getFullYear()}</div>
+
+  <div class="text-xs italic">All rights reserved</div>
+
+  <div class="text-xs italic mt-6 text-slate-400">
+    Powered by <a
+      class="text-blue-600 hover:underline"
+      href="https://astro.build">Astro</a
+    >
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-  }
-</style>
