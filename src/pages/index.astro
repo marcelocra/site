@@ -3,6 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/index-sections/Hero.astro";
 import IconsAndStartProject from "../components/index-sections/IconsAndStartProject.astro";
 import Skills from "../components/index-sections/Skills.astro";
+import IndexAboutSection from "../components/index-sections/IndexAboutSection.astro";
+import IndexProjectsSection from "../components/index-sections/IndexProjectsSection.astro";
+import IndexServicesSection from "../components/index-sections/IndexServicesSection.astro";
+import IndexContactSection from "../components/index-sections/IndexContactSection.astro";
+import IndexBlogSection from "../components/index-sections/IndexBlogSection.astro";
 ---
 
 <BaseLayout>
@@ -15,6 +20,21 @@ import Skills from "../components/index-sections/Skills.astro";
     </section>
     <section>
       <Skills />
+    </section>
+    <section>
+      <IndexAboutSection />
+    </section>
+    <section>
+      <IndexProjectsSection />
+    </section>
+    <section>
+      <IndexServicesSection />
+    </section>
+    <section>
+      <IndexContactSection />
+    </section>
+    <section>
+      <IndexBlogSection />
     </section>
   </main>
 </BaseLayout>
