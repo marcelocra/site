@@ -1,0 +1,29 @@
+---
+const {
+  imageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+  imageAlt = "A beautiful image",
+  title,
+  text,
+  tech,
+  action = null,
+} = Astro.props;
+---
+
+<div class="card min-w-96 w-96 bg-base-100 shadow">
+  <figure class="px-10 pt-10">
+    <!-- @ts-ignore -->
+    <img src={imageUrl} alt={imageAlt} class="rounded-xl" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{title}</h2>
+    <p>{text}</p>
+    <p>{tech}</p>
+    {
+      action && (
+        <div class="card-actions">
+          <button class="btn btn-primary">{action}</button>
+        </div>
+      )
+    }
+  </div>
+</div>
