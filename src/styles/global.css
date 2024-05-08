@@ -18,12 +18,14 @@
 
   --max-width: 1080px;
 
+  --side-width: calc(50vw - (var(--max-width) / 2));
+
   /* font-size: 20px; */
   letter-spacing: 0.02em;
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: var(--light-gray);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;

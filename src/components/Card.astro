@@ -1,27 +1,32 @@
 ---
+import { t } from "../lib/i18n/t";
+
 const {
   imageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
   imageAlt = "A beautiful image",
   title,
   text,
   tech,
-  action = null,
+  buttonText = null,
 } = Astro.props;
 ---
 
-<div class="card min-w-96 w-96 bg-base-100 shadow">
-  <figure class="px-10 pt-10">
+<div class="card min-w-96 w-96 bg-[var(--bg-bege)] shadow-md rounded-lg">
+  <figure class="px-8 pt-8">
     <!-- @ts-ignore -->
-    <img src={imageUrl} alt={imageAlt} class="rounded-xl" />
+    <img src={imageUrl} alt={imageAlt} class="rounded-lg" />
   </figure>
-  <div class="card-body">
+  <div class="card-body pt-3 flex flex-col gap-3">
     <h2 class="card-title">{title}</h2>
-    <p>{text}</p>
-    <p>{tech}</p>
+    <p class="text-sm">{text}</p>
+    <br />
+    <p class="text-sm">
+      <strong>{t("card.technologies.title")}: </strong>{tech}
+    </p>
     {
-      action && (
-        <div class="card-actions">
-          <button class="btn btn-primary">{action}</button>
+      buttonText && (
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">{buttonText}</button>
         </div>
       )
     }

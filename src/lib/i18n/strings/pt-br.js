@@ -9,4 +9,5 @@ export default {
     "Eu sou um Desenvolvedor Full Stack, atualmente baseado em Belo Horizonte, Minas Gerais, Brasil.",
   "skills.title": "Skills",
   "skills.subtitle": "Tech, Software Design e Arquitetura",
+  "card.technologies.title": "Tecnologias",
 };
