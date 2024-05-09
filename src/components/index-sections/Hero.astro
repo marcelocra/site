@@ -1,13 +1,88 @@
 ---
 import { t } from "../../lib/i18n/t";
+import SvgHeroCrazyLines from "./svgs/SvgHeroCrazyLines.astro";
 ---
 
-<div>
-  <div class="font-bold text-6xl mb-5 my-gradient">
-    {t("heroHeadline")}
+<div class="grid grid-cols-2 pt-28">
+  <div>
+    <div class="font-bold text-6xl mb-5 my-gradient">
+      {t("heroHeadline")}
+    </div>
+    <div class="text-lg">{t("heroSubtitle")}</div>
   </div>
-  <div class="text-lg">{t("heroSubtitle")}</div>
+  <div>
+    <div class="absolute top-[75px] left-[40%] filter blur-[60px]">
+      <SvgHeroCrazyLines />
+    </div>
+    <div
+      class="absolute opacity-50 top-[575px] left-[20%] filter blur-[60px] transform translate-x-0 translate-y-[745px] rotate-[86deg] scale-x-[4] -scale-y-1"
+    >
+      <SvgHeroCrazyLines />
+    </div>
+  </div>
 </div>
-<div class="flex justify-center">
-  <div>some crazy svg here</div>
+
+<div class="hidden">
+  <div class="grid grid-cols-2 mt-28">
+    <hero-left-side>
+      <div class="font-bold text-6xl mb-5 my-gradient">
+        {t("heroHeadline")}
+      </div>
+      <div class="text-lg">{t("heroSubtitle")}</div>
+    </hero-left-side>
+    <hero-right-side>
+      <template>
+        <style>
+          svg {
+            position: absolute;
+            top: 75px;
+            filter: blur(60px);
+            left: 40%;
+            transform: rotate(95deg) scale(1, -1);
+          }
+          svg + svg {
+            position: absolute;
+            transform: translate(0px, 745px) rotate(124deg) scale(4, -1);
+          }
+          #background-image {
+            width: 100%;
+            overflow: hidden;
+            /* position: absolute;
+          top: 0;
+          left: 0;
+          background-color: red; */
+          }
+        </style>
+        <!-- <SvgHeroCrazyLines />
+      <SvgHeroCrazyLines /> -->
+        <div id="background-image">
+          <SvgHeroCrazyLines />
+          <SvgHeroCrazyLines />
+        </div>
+      </template>
+    </hero-right-side>
+  </div>
 </div>
+
+<script>
+  // class HeroLeftSide extends HTMLElement {
+  //   constructor() {
+  //     super();
+  //   }
+  // }
+
+  // class HeroRightSide extends HTMLElement {
+  //   constructor() {
+  //     super();
+
+  //     const template = this.querySelector("template")!;
+  //     const templateContent = template.content;
+
+  //     const shadowRoot = this.attachShadow({ mode: "open" });
+  //     shadowRoot.appendChild(templateContent.cloneNode(true));
+  //   }
+  // }
+
+  // customElements.define("hero-left-side", HeroLeftSide);
+  // customElements.define("hero-right-side", HeroRightSide);
+</script>
