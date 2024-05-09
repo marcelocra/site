@@ -2,7 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import { t } from "../lib/i18n/t";
-import StartProjectButton from "./StartProjectButton.astro";
+import Button from "./Button.astro";
 ---
 
 <header class="bg-[#ECEBE4] p-5 shadow-xl">
@@ -18,6 +18,6 @@ import StartProjectButton from "./StartProjectButton.astro";
       <HeaderLink href="/projects">{t("projects")}</HeaderLink>
       <HeaderLink href="/blog">{t("blog")}</HeaderLink>
     </div>
-    <StartProjectButton shadow />
+    <Button>{t("startProject")}</Button>
   </nav>
 </header>

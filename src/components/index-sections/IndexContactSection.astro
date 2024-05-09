@@ -1,4 +1,5 @@
 ---
+import Button from "../Button.astro";
 import SvgContactBlueShape from "./svgs/SvgContactBlueShape.astro";
 ---
 
@@ -18,11 +19,7 @@ import SvgContactBlueShape from "./svgs/SvgContactBlueShape.astro";
         placeholder="Mensagem direta (WhatsApp)"
         class="textarea border-b-slate-400 rounded-none bg-transparent focus:border-none mb-4 w-full"
         rows="1"></textarea>
-      <a
-        href=""
-        class="cursor-pointer bg-black text-white font-bold px-10 py-2 rounded-[10px] hover:bg-opacity-80 mt-2"
-        >Enviar</a
-      >
+      <a href=""><Button>Enviar</Button></a>
       <div class="flex flex-col w-full justify-start">
         <div class="mt-14">
           <p class="text-base">E-mail</p>
