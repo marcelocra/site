@@ -20,13 +20,18 @@ const {
     <h2 class="card-title">{title}</h2>
     <p class="text-sm">{text}</p>
     <br />
-    <p class="text-sm">
-      <strong>{t("card.technologies.title")}: </strong>{tech}
-    </p>
+    {
+      tech && (
+        <p class="text-sm">
+          <strong>{t("card.technologies.title")}: </strong>
+          {tech}
+        </p>
+      )
+    }
     {
       buttonText && (
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">{buttonText}</button>
+        <div class="card-actions">
+          <button class="text-blue-500 font-bold">{buttonText}</button>
         </div>
       )
     }
