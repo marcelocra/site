@@ -1,0 +1,13 @@
+---
+import clsx from "clsx";
+
+const { outline = false, shadow = false } = Astro.props;
+---
+
+<button
+  class={clsx(
+    "font-bold px-10 py-2 rounded-[10px] hover:bg-opacity-60",
+    outline ? "btn-outline border-2 border-black" : "bg-[#160033] text-white",
+    shadow ? "my-shadow" : ""
+  )}><slot /></button
+>
