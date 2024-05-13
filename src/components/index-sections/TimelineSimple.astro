@@ -1,68 +1,73 @@
 ---
 import SvgLogoITA from "./svgs/SvgLogoITA.astro";
 import NetherlandsUniversities from "./NetherlandsUniversities.astro";
+import SvgLogoGoogleFull from "./svgs/SvgLogoGoogleFull.astro";
+import SvgLogoGoogleG from "./svgs/SvgLogoGoogleG.astro";
 
-const content = [
-  {
-    Logo: SvgLogoITA,
-    year: 2010,
-    name: "ITA",
-    description: `
-      <p class="mt-10 text-base font-medium text-neutral-800">
-        <span
-          >I started my Computer Engineering graduation at the most prestigious
-          engineering school in Brazil - ITA (Technological Institute of
-          Aeronautic), starting my programming journey with
-        </span>
-        <strong class="font-bold text-neutral-800">C language.</strong>
-      </p>
-      `,
-  },
-  {
-    Logo: NetherlandsUniversities,
-    year: 2013,
-    name: "The Netherlands",
-    description: `
-      <p class="mt-8 text-base font-medium text-neutral-800 max-md:max-w-full">
-        <span
-          >During my undergraduate course, I lived one year abroad, in The
-          Netherlands, where I attended both the
-        </span>
-        <strong class="font-bold text-neutral-800">University of Twente</strong>
-        <span>and the</span>
-        <strong class="font-bold text-neutral-800"
-          >Eindhoven University of Technology
-        </strong>
-        <span class="text-neutral-800">(TU/e)</span>
-        <span>.</span>
-      </p>
-      `,
-  },
-];
+import TimelineContentITA from "./TimelineContentITA.astro";
+import TimelineContentTheNetherlands from "./TimelineContentTheNetherlands.astro";
+import TimelineContentGoogleIntern from "./TimelineContentGoogleIntern.astro";
+import TimelineContentGoogleDeveloper from "./TimelineContentGoogleDeveloper.astro";
+
+// const content = [
+//   {
+//     Logo: SvgLogoITA,
+//     year: 2010,
+//     name: "ITA",
+//     Description: TimelineContentITA,
+//   },
+//   {
+//     Logo: NetherlandsUniversities,
+//     year: 2013,
+//     name: "The Netherlands",
+//     Description: TimelineContentTheNetherlands,
+//   },
+//   {
+//     Logo: SvgLogoGoogleFull,
+//     year: 2015,
+//     name: "Google - Software Developer Intern",
+//     Description: TimelineContentGoogleIntern,
+//   },
+//   {
+//     Logo: SvgLogoGoogleG,
+//     year: 2016,
+//     name: "Google - Software Developer",
+//     Description: TimelineContentGoogleDeveloper,
+//   },
+// ];
 ---
 
-<div class="flex flex-col gap-1">
-  <div class="flex flex-col">
+<div class="flex flex-col gap-9 m-3">
+  <TimelineContentITA />
+  <TimelineContentTheNetherlands />
+  <TimelineContentGoogleIntern />
+  <TimelineContentGoogleDeveloper />
+</div>
+
+<!-- <div class="flex flex-col gap-1">
+  <div class="flex flex-col gap-9 m-3">
     {
-      content.map(({ Logo, year, name, description }, index) => (
-        <div class="flex flex-col gap-3">
-          <div class="">
+      content.map(({ Logo, year, name, Description }) => (
+
+        // <div class="ex1 flex flex-row items-center gap-3">
+        //   <div class="text-4xl font-medium">{year}</div>
+        //   <Logo />
+        //   <div class="text-2xl font-semibold">{name}</div>
+        //   <Description />
+        // </div>
+
+        <div class="grid grid-cols-2 gap-10">
+          <div>
             <Logo />
+            <Description />
           </div>
           <div class="flex flex-row items-center gap-3">
-            {index % 2 === 0 ? (
-              <div class="text-2xl font-semibold">{name}</div>
-            ) : null}
             <div class="text-4xl font-medium">{year}</div>
-            {index % 2 === 1 ? (
-              <div class="text-2xl font-semibold">{name}</div>
-            ) : null}
-          </div>
-          <div>
-            <Fragment set:html={description} />
+            <div class="text-2xl font-semibold">{name}</div>
           </div>
         </div>
+
       ))
     }
   </div>
-</div>
+</div> -->
