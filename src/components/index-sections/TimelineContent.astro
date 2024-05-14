@@ -1,0 +1,42 @@
+---
+import clsx from "clsx";
+
+const { name, year, isTextFirst = true } = Astro.props;
+---
+
+<!--
+  Need to position the elements in a grid with 1 row and 11 columns.
+
+  We NEED to define the rows too, otherwise it will only position the
+  elements correctly when the text is after the year. That is because
+  the "year div" will be already in place, and since the content one
+  starts in col-span-1, it will be in the next row.
+ -->
+<div class="grid grid-rows-1 grid-cols-11 gap-3 items-center">
+  {
+    year && (
+      <div
+        class={clsx(
+          "row-start-1 col-start-6 col-span-1 text-3xl font-medium",
+          isTextFirst ? "text-right" : "text-left"
+        )}
+      >
+        {year}
+      </div>
+    )
+  }
+  <div
+    class={clsx(
+      "row-start-1 col-span-5",
+      isTextFirst
+        ? "col-start-1 border-r-2 border-r-blue-600"
+        : "col-start-7 border-l-2 border-l-blue-600"
+    )}
+  >
+    <div class="flex flex-col gap-3 p-6">
+      <slot name="logo" />
+      <div class="text-2xl font-semibold">{name}</div>
+      <slot />
+    </div>
+  </div>
+</div>

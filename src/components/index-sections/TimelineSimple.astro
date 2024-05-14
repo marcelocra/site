@@ -1,129 +1,185 @@
 ---
+import TimelineContent from "./TimelineContent.astro";
+
 import SvgLogoITA from "./svgs/SvgLogoITA.astro";
 import NetherlandsUniversities from "./NetherlandsUniversities.astro";
 import SvgLogoGoogleFull from "./svgs/SvgLogoGoogleFull.astro";
 import SvgLogoGoogleG from "./svgs/SvgLogoGoogleG.astro";
-
-import TimelineContentITA from "./TimelineContentITA.astro";
-import TimelineContentTheNetherlands from "./TimelineContentTheNetherlands.astro";
-import TimelineContentGoogleIntern from "./TimelineContentGoogleIntern.astro";
-import TimelineContentGoogleDeveloper from "./TimelineContentGoogleDeveloper.astro";
-
-// const content = [
-//   {
-//     Logo: SvgLogoITA,
-//     year: 2010,
-//     name: "ITA",
-//     Description: TimelineContentITA,
-//   },
-//   {
-//     Logo: NetherlandsUniversities,
-//     year: 2013,
-//     name: "The Netherlands",
-//     Description: TimelineContentTheNetherlands,
-//   },
-//   {
-//     Logo: SvgLogoGoogleFull,
-//     year: 2015,
-//     name: "Google - Software Developer Intern",
-//     Description: TimelineContentGoogleIntern,
-//   },
-//   {
-//     Logo: SvgLogoGoogleG,
-//     year: 2016,
-//     name: "Google - Software Developer",
-//     Description: TimelineContentGoogleDeveloper,
-//   },
-// ];
+import SvgLogoKuadro from "./svgs/SvgLogoKuadro.astro";
+import SvgLogoVBOInitials from "./svgs/SvgLogoVBOInitials.astro";
+import SvgLogoHubla from "./svgs/SvgLogoHubla.astro";
 ---
 
-<div class="flex flex-col m-3">
-  <div class="grid grid-cols-12">
-    <div class="col-span-4">
-      <TimelineContentITA />
-    </div>
-    <div class="col-start-5 col-span-1">
-      <svg
-        version="1.1"
-        width="40"
-        height="100%"
-        class="overflow-visible"
-        fill="blue"
-        xmlns="http://www.w3.org/2000/svg"
+<div class="flex flex-col gap-10 m-3">
+  <TimelineContent name="ITA" year="2010">
+    <SvgLogoITA slot="logo" />
+    <p>
+      I started my Computer Engineering graduation at one of the most
+      prestigious engineering schools in Brazil - ITA (Instituto Tecnológico de
+      Aeronáutica) - starting my programming journey using the <strong
+        >C language.</strong
       >
-        <text
-          x="80"
-          y="140"
-          font-size="32"
-          font-weight="500"
-          font-family="Inter"
-          text-anchor="start"
-          fill="black">2010</text
-        >
-        <circle cx="20" cy="120" r="20"></circle>
-        <rect x="0" y="120" width="40" height="100%"></rect>
-      </svg>
+    </p>
+  </TimelineContent>
+
+  <TimelineContent name="The Netherlands" year="2013" isTextFirst={false}>
+    <NetherlandsUniversities slot="logo" />
+    <p>
+      During my undergraduate course, I lived one year abroad, in The
+      Netherlands, where I attended both the <strong
+        >University of Twente</strong
+      > and the <strong>Eindhoven University of Technology</strong> (TU/e).
+    </p>
+  </TimelineContent>
+
+  <TimelineContent name="The Netherlands" year="2015">
+    <SvgLogoGoogleFull slot="logo" />
+    <div class="flex flex-col gap-3">
+      <p>
+        I finished my degree at ITA in 2015, and by that time, I had done a 6
+        months internship at Google, with an offer to go back as a full-time
+        employee (FTE).
+      </p>
+
+      <p>
+        During this internship I Implemented a large portion of an <strong
+          >iOS</strong
+        > app's automated testing infrastructure, along with many tests.
+      </p>
+
+      <p>
+        To do that, I used <strong>Objective-C</strong>, <a
+          href="https://github.com/google/EarlGrey"
+          class="font-bold underline text-neutral-800"
+          target="_blank">EarlGrey</a
+        > (a UI testing framework a-la Selenium), <strong>Bazel</strong> (a build
+        system) and <strong>Python.</strong>
+      </p>
     </div>
-  </div>
-  <div class="grid grid-cols-12">
-    <div class="col-start-7 col-span-1">
-      <svg
-        version="1.1"
-        width="40"
-        height="100%"
-        class="overflow-visible"
-        fill="blue"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <text
-          x="-90"
-          y="100"
-          font-size="32"
-          font-weight="500"
-          font-family="Inter"
-          text-anchor="start"
-          fill="black">2013</text
-        >
-        <circle cx="50" cy="60" r="20"></circle>
-        <rect x="30" y="60" width="40" height="100%"></rect>
-      </svg>
+  </TimelineContent>
+
+  <TimelineContent
+    name="Google - Software Developer"
+    year="2016"
+    isTextFirst={false}
+  >
+    <SvgLogoGoogleG slot="logo" />
+    <div class="flex flex-col gap-3">
+      <p>
+        Executed projects with global reach, doing system design,
+        implementation, quality analysis and monitoring. Interacted with people
+        from many different areas, including PMs, engineers, designers, domain
+        experts and more, and was recognized by my strong technical capacity and
+        my ability to lighten the working environment. Used <strong>C++</strong
+        >, <strong>JavaScript</strong>,
+        <a href="https://research.google/pubs/pub35650/" target="_blank"
+          >Flume</a
+        >, <strong>Java</strong>, <a href="https://bazel.build" target="_blank"
+          >Bazel</a
+        > and <strong>Python</strong>.
+      </p>
+
+      <ul class="m-6">
+        <li class="list-disc">
+          Implemented many frontend projects using an internal framework. Was
+          considered a reference in that framework.
+        </li>
+        <li class="list-disc">
+          Designed and refactored parts of the <strong
+            >Chromium source code</strong
+          >, separating semantically distinct parts that were together,
+          improving maintainability
+        </li>
+        <li class="list-disc">
+          Designed and implemented many data processing pipelines using
+          something similar to <strong
+            >Apache Beam<strong>. Also considered a reference in this </strong>
+          </strong>
+        </li>
+      </ul>
     </div>
-    <div class="col-span-4">
-      <TimelineContentTheNetherlands />
+  </TimelineContent>
+
+  <TimelineContent name="Kuadro - Software Developer & PM" year="2020">
+    <SvgLogoKuadro slot="logo" />
+    <div class="flex flex-col gap-3">
+      <p>
+        In 2020, I quited Google to follow my entrepreneurship dreams, first
+        working in a startup, then founding my own (in a completely different
+        domain, digital marketing!).
+      </p>
+
+      <p>
+        Delivered around <strong>15 projects</strong> using sprints of two weeks.
+        Aside from working on implementation and execution, interacted with the CEO
+        or CTO on a daily basis. Implemented the <strong>full frontend</strong>
+        for a number of functionalities, including the students' point scoring ui
+        and the internal dashboard system used by TAs, using <strong
+          >JavaScript</strong
+        >, <strong>React</strong>, <strong>GraphQL</strong> and <strong
+          >Node</strong
+        >.
+      </p>
     </div>
-  </div>
-  <div class="grid grid-cols-12">
-    <div class="col-span-4">
-      <TimelineContentGoogleIntern />
+  </TimelineContent>
+
+  <TimelineContent
+    name="Vender Bem Online - Founder & Copywriter"
+    isTextFirst={false}
+  >
+    <SvgLogoVBOInitials slot="logo" />
+    <p>
+      This is my own software and digital marketing company! I founded it in
+      2020 and keep it to this day. Worked mostly with <strong
+        >Product Launch Formula</strong
+      > and <strong>Copywriting</strong>, launching other peoples products (3
+      launches so far).
+    </p>
+  </TimelineContent>
+
+  <TimelineContent name="Hubla" year="2022">
+    <SvgLogoHubla slot="logo" />
+    <div class="flex flex-col gap-3">
+      <p>
+        Had major role in many designs, either as a system designer or as a
+        reviewer. Implemented several core features, mainly in <strong
+          class="font-bold">TypeScript</strong
+        >, <strong class="font-bold text-neutral-800">React</strong>, <strong
+          class="font-bold text-neutral-800">JavaScript</strong
+        > and <strong class="font-bold text-neutral-800">Node.</strong>
+      </p>
+
+      <ul class="list-disc m-6">
+        <li>
+          Implemented the full frontend for order bump, upsell and mobile
+          checkout functionalities
+        </li>
+        <li>Structured the system design process for the engineering team</li>
+        <li>
+          Designed and implemented a logging system using <strong
+            class="font-bold">OpenTelemetry specs</strong
+          >. It improved the observability of the company's systems by
+          introducing structured logging
+        </li>
+        <li>
+          Worked improving <strong class="font-bold">SLI measurement</strong>,
+          to improve communication with clients
+        </li>
+      </ul>
     </div>
-    <div class="col-start-5 col-span-1">
-      <svg
-        version="1.1"
-        width="40"
-        height="100%"
-        class="overflow-visible"
-        fill="blue"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <text
-          x="80"
-          y="140"
-          font-size="32"
-          font-weight="500"
-          font-family="Inter"
-          text-anchor="start"
-          fill="black">2015</text
-        >
-        <rect x="0" y="0" width="40" height="100%"></rect>
-      </svg>
-    </div>
-  </div>
-  <div class="grid grid-cols-12">
-    <div class="col-start-6 col-span-1">blabla</div>
-    <div class="col-span-4">
-      <TimelineContentGoogleDeveloper />
-    </div>
-  </div>
+  </TimelineContent>
+
+  <TimelineContent
+    name="Today"
+    year={new Date().getFullYear()}
+    isTextFirst={false}
+  >
+    <p>
+      Now I'm in between those worlds, trying to find a place that will fuel my
+      love for software development and help me grow as an engineer, while
+      letting me keep in touch with my entrepreneurial spirit
+    </p>
+  </TimelineContent>
 </div>
 
 <!-- <style>
