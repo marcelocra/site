@@ -4,12 +4,15 @@
 
 right now:
 
-- [ ] finish updating all texts
+- [ ] finish updating main page content
+  - [x] timeline
+  - [ ] projects
+  - [ ] blog excerpts
 
 next (in order):
 
-- [ ] prepare mobile version
 - [ ] fix blog style
+- [ ] prepare mobile version
 - [ ] extract strings to isolated file
 - [ ] improve outlined button hover style
 - [ ] fix active links
