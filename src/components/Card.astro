@@ -1,37 +1,44 @@
 ---
 const {
-  imageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-  imageAlt = "A beautiful image",
+  imageUrl,
+  imageAlt,
   title,
   text,
   tech,
   buttonText = null,
 } = Astro.props;
+
+const showImage = imageUrl && imageAlt;
 ---
 
-<div class="card min-w-96 w-96 bg-[var(--bg-bege)] shadow-md rounded-lg">
-  <figure class="px-8 pt-8">
-    <!-- @ts-ignore -->
-    <img src={imageUrl} alt={imageAlt} class="rounded-lg" />
-  </figure>
-  <div class="card-body pt-3 flex flex-col gap-3">
-    <h2 class="card-title">{title}</h2>
-    <p class="text-sm">{text}</p>
-    <br />
-    {
-      tech && (
-        <p class="text-sm">
-          <strong>Technologies: </strong>
-          {tech}
-        </p>
-      )
-    }
-    {
-      buttonText && (
-        <div class="card-actions">
-          <button class="text-blue-500 font-bold">{buttonText}</button>
-        </div>
-      )
-    }
+<div class="card min-w-96 bg-[var(--bg-bege)] shadow-md rounded-lg">
+  <div class="card-body flex flex-col gap-3 justify-between">
+    <div>
+      {showImage && 
+        <figure class="px-8">
+          <!-- @ts-ignore -->
+          <img src={imageUrl} alt={imageAlt} class="rounded-lg" />
+        </figure>
+      }
+      <h2 class="card-title">{title}</h2>
+      <p class="text-sm mt-3">{text}</p>
+    </div>
+    <div>
+      {
+        tech && (
+          <p class="text-sm">
+            <strong>Technologies: </strong>
+            {tech}
+          </p>
+        )
+      }
+      {
+        buttonText && (
+          <div class="card-actions">
+            <button class="text-blue-500 font-bold">{buttonText}</button>
+          </div>
+        )
+      }
+    </div>
   </div>
 </div>
