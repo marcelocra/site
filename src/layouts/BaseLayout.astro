@@ -9,6 +9,22 @@ import Header from "../components/Header.astro";
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      #bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-image: url("/hero-crazy-lines.svg");
+        background-attachment: local;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+        z-index: -1;
+        filter: blur(10px);
+      }
+    </style>
   </head>
   <body class="min-h-screen flex flex-col justify-between">
     <div>
@@ -18,5 +34,6 @@ import Header from "../components/Header.astro";
       </div>
     </div>
     <Footer />
+    <div id="bg"></div>
   </body>
 </html>
