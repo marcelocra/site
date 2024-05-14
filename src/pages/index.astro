@@ -36,33 +36,5 @@ import IndexBlogSection from "../components/index-sections/IndexBlogSection.astr
     <section id="blog">
       <IndexBlogSection />
     </section>
-    <div id="bg"></div>
   </main>
 </BaseLayout>
-
-<!-- Example: how to style a section with a 
-  different background color and full width.
-<style>
-  #projects-section {
-    background-color: var(--light-gray);
-    width: 99.4vw;
-    margin-left: calc(-50vw + (var(--max-width) / 2));
-    padding-left: calc(50vw - (var(--max-width) / 2));
-  }
-</style> -->
-
-<style>
-  #bg {
-    position: absolute;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    filter: blur(10px);
-
-    background-image: url("../components/index-sections/svgs/hero-crazy-lines.svg");
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-  }
-</style>

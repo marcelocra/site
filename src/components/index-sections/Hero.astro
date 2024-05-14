@@ -1,4 +1,8 @@
-<div class="grid grid-cols-2 pt-28">
+---
+import SvgHeroCrazyLines from "./svgs/SvgHeroCrazyLines.astro";
+---
+
+<div class="grid grid-cols-2 pt-28 pb-10">
   <div class="col-span-1">
     <div class="font-bold text-6xl mb-5 my-gradient">
       Hello, my name is Marcelo Almeida
@@ -7,5 +11,10 @@
       I am a Full Stack Developer, currently based in Belo Horizonte, Minas
       Gerais, Brazil.
     </div>
+  </div>
+  <div
+    class="col-span-1 -mt-10 overflow-x-hidden filter blur-xl transform -scale-x-90 -translate-x-[30%]"
+  >
+    <SvgHeroCrazyLines />
   </div>
 </div>
