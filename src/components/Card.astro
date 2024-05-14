@@ -1,24 +1,40 @@
 ---
+import clsx from "clsx";
+
 const {
   imageUrl,
   imageAlt,
   title,
   text,
   tech,
+  old = false,
   buttonText = null,
 } = Astro.props;
 
 const showImage = imageUrl && imageAlt;
 ---
 
-<div class="card min-w-96 bg-[var(--bg-bege)] shadow-md rounded-lg">
+<div
+  class={clsx(
+    "card min-w-96 bg-[var(--bg-bege)] shadow-md rounded-lg",
+    old ? "old-card" : ""
+  )}
+>
+  {
+    old && (
+      <div class="absolute top-0 right-0 py-1 px-3 bg-red-300 rounded-r-md">
+        old
+      </div>
+    )
+  }
   <div class="card-body flex flex-col gap-3 justify-between">
     <div>
-      {showImage && 
-        <figure class="px-8">
-          <!-- @ts-ignore -->
-          <img src={imageUrl} alt={imageAlt} class="rounded-lg" />
-        </figure>
+      {
+        showImage && (
+          <figure class="px-8">
+            <img src={imageUrl} alt={imageAlt} class="rounded-lg" />
+          </figure>
+        )
       }
       <h2 class="card-title">{title}</h2>
       <p class="text-sm mt-3">{text}</p>
@@ -42,3 +58,15 @@ const showImage = imageUrl && imageAlt;
     </div>
   </div>
 </div>
+
+<style>
+  .old-card {
+    background: repeating-linear-gradient(
+      135deg,
+      #ffdddd,
+      #ffdddd 10px,
+      #ffcccc 10px,
+      #ffcccc 20px
+    );
+  }
+</style>
