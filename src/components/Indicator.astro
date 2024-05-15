@@ -1,0 +1,8 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="indicator">
+  <span class="indicator-item badge badge-primary">{text}</span>
+  <slot />
+</div>
