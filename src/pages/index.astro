@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/index-sections/Hero.astro";
-import IconsAndStartProject from "../components/index-sections/IndexIconsAndStartProjectSection.astro";
-import Skills from "../components/index-sections/Skills.astro";
+import IndexHeroSection from "../components/index-sections/IndexHeroSection.astro";
+import IndexIconsAndStartProjectSection from "../components/index-sections/IndexIconsAndStartProjectSection.astro";
+import IndexSkillsSection from "../components/index-sections/IndexSkillsSection.astro";
 import IndexAboutSection from "../components/index-sections/IndexAboutSection.astro";
 import IndexProjectsSection from "../components/index-sections/IndexProjectsSection.astro";
 import IndexServicesSection from "../components/index-sections/IndexServicesSection.astro";
@@ -13,13 +13,13 @@ import IndexBlogSection from "../components/index-sections/IndexBlogSection.astr
 <BaseLayout>
   <main class="flex flex-col gap-10">
     <section>
-      <Hero />
+      <IndexHeroSection />
     </section>
     <section class="grid grid-cols-3">
-      <IconsAndStartProject />
+      <IndexIconsAndStartProjectSection />
     </section>
     <section>
-      <Skills />
+      <IndexSkillsSection />
     </section>
     <section id="about">
       <IndexAboutSection />
