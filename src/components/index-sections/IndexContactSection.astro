@@ -16,10 +16,10 @@ import SvgContactBlueShape from "./svgs/SvgContactBlueShape.astro";
   <div class="flex flex-col items-center">
     <contact-form class="flex flex-col items-center w-3/5 mx-auto">
       <textarea
-        placeholder="Mensagem direta (WhatsApp)"
-        class="textarea border-b-slate-400 rounded-none bg-transparent focus:border-none mb-4 w-full"
-        rows="1"></textarea>
-      <a href=""><Button>Enviar</Button></a>
+        placeholder="I'd like to talk about a project. (Type here or just hit send! You'll be able to edit the message in WhatsApp before sending.)"
+        class="textarea border-slate-400 rounded-none bg-transparent focus:border-none mb-4 w-full overflow-hidden"
+      ></textarea>
+      <a href=""><Button>Send</Button></a>
       <div class="flex flex-col w-full justify-start">
         <div class="mt-14">
           <p class="text-base">E-mail</p>
@@ -39,16 +39,39 @@ import SvgContactBlueShape from "./svgs/SvgContactBlueShape.astro";
 
 <script>
   class ContactForm extends HTMLElement {
+    textarea: HTMLTextAreaElement;
+
     constructor() {
       super();
+
+      const typedText = window.localStorage.getItem("typedText") || "";
+
+      this.textarea = this.querySelector("textarea")!;
+      this.textarea.value = typedText;
+      this.textarea.style.height = this.textarea.scrollHeight + "px";
     }
 
     connectedCallback() {
+      this.querySelector("textarea")!.addEventListener("input", (e) => {
+        if (e && e.target) {
+          // @ts-expect-error - value exists
+          const value = e.target.value;
+
+          this.textarea.style.height = "";
+          this.textarea.style.height = this.textarea.scrollHeight + "px";
+
+          window.localStorage.setItem("typedText", value);
+        }
+      });
+
       this.querySelector("a")!.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const message = this.querySelector("input")!.value;
-        const url = `https://api.whatsapp.com/send?phone=5511999999999&text=${message}`;
+        let message = this.textarea.value;
+        if (message === "") {
+          message = this.textarea.placeholder.replace(/\..*$/, ".");
+        }
+        const url = `https://api.whatsapp.com/send?phone=5531971320866&text=${message}`;
         window.open(url, "_blank");
       });
     }
