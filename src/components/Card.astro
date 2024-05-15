@@ -1,5 +1,6 @@
 ---
 import clsx from "clsx";
+import { marked } from "marked";
 
 const {
   imageUrl,
@@ -10,6 +11,7 @@ const {
   tag = null,
   old = null,
   buttonText = null,
+  buttonHref = null,
   gh = null,
 } = Astro.props;
 
@@ -37,7 +39,7 @@ const showImage = imageUrl && imageAlt;
       }
       <h2 class="card-title">{title}</h2>
       <p class="text-sm mt-3">
-        {text}
+        <Fragment set:html={marked.parseInline(text)} />
         {
           gh && (
             <a class="text-sm" href={gh}>
@@ -51,16 +53,18 @@ const showImage = imageUrl && imageAlt;
     <div>
       {
         tech && (
-          <p class="text-sm">
+          <p class="text-sm capitalize">
             <strong>Technologies: </strong>
             {tech}
           </p>
         )
       }
       {
-        buttonText && (
+        buttonText && buttonHref && (
           <div class="card-actions">
-            <button class="text-blue-500 font-bold">{buttonText}</button>
+            <a class="text-blue-500 font-bold mt-3" href={buttonHref}>
+              <button>{buttonText}</button>
+            </a>
           </div>
         )
       }

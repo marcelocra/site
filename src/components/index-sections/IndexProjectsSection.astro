@@ -1,14 +1,9 @@
 ---
 import Card from "../Card.astro";
+import MultipleCardsCarousel from "./MultipleCardsCarousel.astro";
 ---
 
-<div class="flex justify-between items-center">
-  <h2 class="text-4xl font-bold m-6">Projects</h2>
-  <a href="/projects">see all</a>
-</div>
-<div
-  class="grid grid-flow-col grid-rows-2 gap-3 justify-between w-full overflow-x-scroll [&::-webkit-scrollbar]:hidden p-3"
->
+<MultipleCardsCarousel title="Projects" href="/projects">
   <Card
     title="YourLinx"
     text="Go quickly to any website that you frequently use. Faster and more flexible than bookmarks."
@@ -100,4 +95,4 @@ import Card from "../Card.astro";
     tag="archived"
     old
   />
-</div>
+</MultipleCardsCarousel>
