@@ -28,15 +28,15 @@ abstract class DeaultStrings {
 
 class PtBrStrings extends DeaultStrings {}
 
-class EnStrings extends DeaultStrings {
-  constructor() {
-    super();
+// class EnStrings extends DeaultStrings {
+//   constructor() {
+//     super();
 
-    this.strings.appDescription = "Set of utilities to make your day easier.";
+//     this.strings.appDescription = "Set of utilities to make your day easier.";
 
-    this.strings.numberToFullText.title = "Number to full text";
-  }
-}
+//     this.strings.numberToFullText.title = "Number to full text";
+//   }
+// }
 
 const strings = new PtBrStrings();
 export const s = { ...strings.strings };
