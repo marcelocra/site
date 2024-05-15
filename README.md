@@ -4,14 +4,11 @@
 
 right now:
 
-- [ ] finish updating main page content
-  - [x] timeline
-  - [x] projects
-  - [ ] blog excerpts
+- [ ] fix blog style
+- [ ] fix home link style
 
 next (in order):
 
-- [ ] fix blog style
 - [ ] prepare mobile version
 - [ ] extract strings to isolated file
 - [ ] fix active links
@@ -19,6 +16,12 @@ next (in order):
 - [ ] extract svgs to one component
 
 done or ~~cancelled~~:
+
+- [x] finish updating main page content
+
+  - [x] timeline
+  - [x] projects
+  - [x] blog excerpts
 
 - [x] improve outlined button hover style
 - ~~strings en and pt-br~~
