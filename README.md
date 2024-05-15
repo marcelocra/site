@@ -6,7 +6,7 @@ right now:
 
 - [ ] finish updating main page content
   - [x] timeline
-  - [ ] projects
+  - [x] projects
   - [ ] blog excerpts
 
 next (in order):
