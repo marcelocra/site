@@ -59,7 +59,7 @@ function abbreviate(phrase) {
 
 A solução em F# fica assim:
 
-```f#
+```fsharp
 let abbreviate (phrase: string) =
     // Everything that is not a letter or space.
     let delimiters = "[^a-zA-Z ]"
