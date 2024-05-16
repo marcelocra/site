@@ -1,15 +1,25 @@
 ---
-import { defaultLocale } from "../consts";
-
 const { date } = Astro.props;
 ---
 
-<time class={Astro.props.class} datetime={date.toISOString()}>
-  {
-    date.toLocaleDateString(defaultLocale(Astro), {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    })
+<formatted-date data-date={date.toISOString()}>
+  <time class={Astro.props.class} datetime={date.toISOString()}> </time>
+</formatted-date>
+
+<script>
+  class FormattedDate extends HTMLElement {
+    constructor() {
+      super();
+
+      this.querySelector("time")!.textContent = new Date(
+        this.dataset.date!
+      ).toLocaleDateString(navigator.language ?? "en-us", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    }
   }
-</time>
+
+  customElements.define("formatted-date", FormattedDate);
+</script>
