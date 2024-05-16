@@ -4,12 +4,12 @@
 
 right now:
 
-- v0.1.1
+- v0.1.2
   - [ ] export cv pdf and link
 
 next (in order):
 
-- v0.1.1
+- v0.1.2
 
   - [ ] figure out the problem with warnings
 
@@ -28,6 +28,8 @@ next (in order):
 
 done or ~~cancelled~~:
 
+- v0.1.1
+  - [x] remove 'see all' from projects in index
 - v0.1.0
   - [x] figure out why it is not deploying
     - it was because I imported the astro config module in consts.ts
