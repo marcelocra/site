@@ -4,7 +4,7 @@
 
 ### right now
 
-v0.1.4
+v0.1.5
 
 - [ ] prepare simple mobile version
 
@@ -28,6 +28,8 @@ v0.1.4
 - [ ] create the cv in a dedicated page
 
 ### done or ~~cancelled~~
+
+[v0.1.4](https://marcelocra-nsqh6zeav3jj.deno.dev)
 
 - [x] figure out the problem with warnings
 
