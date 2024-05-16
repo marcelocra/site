@@ -4,10 +4,11 @@
 
 right now:
 
-- [ ] export cv pdf and link
+- [ ] figure out why it is not deploying
 
 next (in order):
 
+- [ ] export cv pdf and link
 - [ ] fix click target and behavior in blog post page
 - [ ] prepare mobile version
 - [ ] extract strings to isolated file
