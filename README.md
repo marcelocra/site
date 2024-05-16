@@ -9,6 +9,14 @@ right now:
 
 next (in order):
 
+- v0.1.1
+
+  - [ ] figure out the problem with warnings
+
+        09:44:37 ▶ src/pages/blog/index.astro
+        09:44:37   └─ /blog/index.html09:44:37 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file,
+        and that the page accessing the headers is rendered on-demand.
+
 - vNext
   - [ ] prepare simple mobile version
   - [ ] fix active links
