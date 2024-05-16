@@ -8,31 +8,44 @@ import IndexProjectsSection from "../components/index-sections/IndexProjectsSect
 import IndexServicesSection from "../components/index-sections/IndexServicesSection.astro";
 import IndexContactSection from "../components/index-sections/IndexContactSection.astro";
 import IndexBlogSection from "../components/index-sections/IndexBlogSection.astro";
+import Anchor from "../components/Anchor.astro";
 ---
 
 <BaseLayout>
   <section>
     <IndexHeroSection />
   </section>
+
   <section class="grid grid-cols-3">
     <IndexIconsAndStartProjectSection />
   </section>
+
   <section>
     <IndexSkillsSection />
   </section>
-  <section id="about">
+
+  <Anchor id="about" />
+  <section>
     <IndexAboutSection />
   </section>
-  <section id="projects">
+
+  <Anchor id="projects" />
+  <section>
     <IndexProjectsSection />
   </section>
-  <section id="services">
+
+  <Anchor id="services" />
+  <section>
     <IndexServicesSection />
   </section>
-  <section id="contact">
+
+  <Anchor id="contact" />
+  <section>
     <IndexContactSection />
   </section>
-  <section id="blog">
+
+  <Anchor id="blog" />
+  <section>
     <IndexBlogSection />
   </section>
 </BaseLayout>

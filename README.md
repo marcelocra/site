@@ -4,7 +4,6 @@
 
 right now:
 
-- [ ] fix (as in keep static) top bar
 - [ ] export cv pdf and link
 
 next (in order):
@@ -19,6 +18,7 @@ next (in order):
 
 done or ~~cancelled~~:
 
+- [x] fix (as in keep static) top bar
 - [x] fix blog post style
 - [x] fix blog style
 - [x] fix blog link in the footer
