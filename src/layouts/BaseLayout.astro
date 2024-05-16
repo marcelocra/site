@@ -29,9 +29,9 @@ import Header from "../components/Header.astro";
   <body class="min-h-screen flex flex-col justify-between">
     <div>
       <Header />
-      <div class="max-w-[var(--max-width)] mx-auto">
+      <main class="max-w-[var(--max-width)] mx-auto flex flex-col gap-10">
         <slot />
-      </div>
+      </main>
     </div>
     <Footer />
     <div id="bg"></div>

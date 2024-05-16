@@ -1,17 +1,15 @@
 ---
-interface Props {
-	date: Date;
-}
+import { DEFAULT_LOCALE } from "../consts";
 
 const { date } = Astro.props;
 ---
 
-<time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+<time class={Astro.props.class} datetime={date.toISOString()}>
+  {
+    date.toLocaleDateString(DEFAULT_LOCALE, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
+  }
 </time>

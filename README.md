@@ -4,10 +4,8 @@
 
 right now:
 
-- [ ] fix blog style
 - [ ] fix (as in keep static) top bar
 - [ ] export cv pdf and link
-- [ ] fix blog link in the footer
 
 next (in order):
 
@@ -16,9 +14,12 @@ next (in order):
 - [ ] fix active links
   - https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
 - [ ] extract svgs to one component
+- [ ] dark mode
 
 done or ~~cancelled~~:
 
+- [x] fix blog style
+- [x] fix blog link in the footer
 - [x] fix home link style
 - [x] finish updating main page content
   - [x] timeline
