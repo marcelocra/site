@@ -1,12 +1,12 @@
 ---
-import { DEFAULT_LOCALE } from "../consts";
+import { defaultLocale } from "../consts";
 
 const { date } = Astro.props;
 ---
 
 <time class={Astro.props.class} datetime={date.toISOString()}>
   {
-    date.toLocaleDateString(DEFAULT_LOCALE, {
+    date.toLocaleDateString(defaultLocale(Astro), {
       year: "numeric",
       month: "short",
       day: "numeric",
