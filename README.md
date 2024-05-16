@@ -4,21 +4,22 @@
 
 right now:
 
-- [ ] figure out why it is not deploying
+- [ ] export cv pdf and link
 
 next (in order):
 
-- [ ] export cv pdf and link
-- [ ] fix click target and behavior in blog post page
-- [ ] prepare mobile version
-- [ ] extract strings to isolated file
+- [ ] prepare simple mobile version
 - [ ] fix active links
   - https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
-- [ ] extract svgs to one component
+- [ ] fix click target and behavior in blog post page
 - [ ] dark mode
+- [ ] extract svgs to one component
+- [ ] extract strings to isolated file
 
 done or ~~cancelled~~:
 
+- [x] figure out why it is not deploying
+  - it was because I imported the astro config module in consts.ts
 - [x] fix (as in keep static) top bar
 - [x] fix blog post style
 - [x] fix blog style
