@@ -6,7 +6,6 @@ description: >
   que eles usam principalmente JavaScript.
 pubDate: Jan 23, 2023
 createdDate: Jan 23, 2023
-updatedDate: Jan 23, 2023
 tags:
   - svelte
   - sveltekit

@@ -9,6 +9,7 @@ right now:
 
 next (in order):
 
+- [ ] fix click target and behavior in blog post page
 - [ ] prepare mobile version
 - [ ] extract strings to isolated file
 - [ ] fix active links
@@ -18,6 +19,7 @@ next (in order):
 
 done or ~~cancelled~~:
 
+- [x] fix blog post style
 - [x] fix blog style
 - [x] fix blog link in the footer
 - [x] fix home link style
