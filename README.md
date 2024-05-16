@@ -5,7 +5,9 @@
 right now:
 
 - [ ] fix blog style
-- [ ] fix home link style
+- [ ] fix (as in keep static) top bar
+- [ ] export cv pdf and link
+- [ ] fix blog link in the footer
 
 next (in order):
 
@@ -17,12 +19,11 @@ next (in order):
 
 done or ~~cancelled~~:
 
+- [x] fix home link style
 - [x] finish updating main page content
-
   - [x] timeline
   - [x] projects
   - [x] blog excerpts
-
 - [x] improve outlined button hover style
 - ~~strings en and pt-br~~
 - [x] main page
