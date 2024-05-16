@@ -1,4 +1,6 @@
 ---
+import DownloadLatestCV from "./DownloadLatestCV.astro";
+
 const today = new Date();
 ---
 
@@ -6,7 +8,7 @@ const today = new Date();
   <div class="flex flex-row justify-around w-full p-5">
     <div class="flex flex-col">
       <a href="/">Home</a>
-      <a>Download CV</a>
+      <DownloadLatestCV />
       <a href="/blog">Blog</a>
     </div>
     <div>

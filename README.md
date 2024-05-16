@@ -4,11 +4,7 @@
 
 ### right now
 
-v0.1.2
-
-- [ ] export cv pdf and link
-
-### next essentials (in order)
+v0.1.4
 
 - [ ] figure out the problem with warnings
 
@@ -17,6 +13,9 @@ v0.1.2
       and that the page accessing the headers is rendered on-demand.
 
 - [ ] prepare simple mobile version
+
+### next essentials (in order)
+
 - [ ] fix active links
   - https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
 - [ ] fix click target and behavior in blog post page
@@ -36,11 +35,15 @@ v0.1.2
 
 ### done or ~~cancelled~~
 
-v0.1.1
+[v0.1.3](https://marcelocra-zjpvd67wbd7t.deno.dev/)
+
+- [x] export cv pdf and link
+
+[v0.1.2](https://marcelocra-d271fd0hn89k.deno.dev/)
 
 - [x] remove 'see all' from projects in index
 
-v0.1.0
+[v0.1.0](https://marcelocra-5d6h6vwr081t.deno.dev/)
 
 - [x] figure out why it is not deploying
   - it was because I imported the astro config module in consts.ts
