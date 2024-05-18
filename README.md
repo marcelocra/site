@@ -6,7 +6,7 @@
 
 v0.1.5
 
-- [ ] prepare simple mobile version
+- [ ] prepare very simple mobile version
 
 ### next essentials (in order)
 
