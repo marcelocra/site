@@ -27,15 +27,29 @@ import Header from "../components/Header.astro";
     </style>
   </head>
   <body class="min-h-screen flex flex-col justify-between">
-    <div>
-      <Header />
-      <main
-        class="max-w-[var(--max-width)] mx-auto flex flex-col gap-10 relative"
-      >
-        <slot />
-      </main>
+    <!-- Desktop. -->
+    <div class="hidden sm:block">
+      <div>
+        <Header />
+        <main
+          class="max-w-[var(--max-width)] mx-auto flex flex-col gap-10 relative"
+        >
+          <slot />
+        </main>
+      </div>
+      <Footer />
+      <div id="bg"></div>
     </div>
-    <Footer />
-    <div id="bg"></div>
+
+    <!-- Mobile. Not supported for now. -->
+    <div class="min-h-screen flex items-center sm:hidden p-10 bg-slate-900">
+      <div
+        class="p-10 text-center rounded-xl shadow-lg bg-gradient-to-br from-[#fbd8e7] via-[#d3fdac] to-[#7cf8f1]"
+      >
+        Estou lapidando a versão mobile! Mas você pode ver o meu CV <a
+          href="https://mcra.dev/cv">aqui</a
+        > e o meu GitHub <a href="https://github.com/marcelocra">aqui</a>.
+      </div>
+    </div>
   </body>
 </html>
