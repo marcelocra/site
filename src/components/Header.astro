@@ -41,10 +41,10 @@ import Button from "./Button.astro";
 
         <!-- Site top menu options in the middle -->
         <div class="flex-none hidden lg:flex lg:gap-10">
-          <HeaderLink href="/">Home</HeaderLink>
-          <HeaderLink href="/#about">About</HeaderLink>
-          <HeaderLink href="/#projects">Projects</HeaderLink>
-          <HeaderLink href="/#blog">Blog</HeaderLink>
+          <HeaderLink class="header-link" href="#">Home</HeaderLink>
+          <HeaderLink class="header-link" href="#about">About</HeaderLink>
+          <HeaderLink class="header-link" href="#projects">Projects</HeaderLink>
+          <HeaderLink class="header-link" href="#blog">Blog</HeaderLink>
         </div>
 
         <!-- Right side button -->
@@ -57,12 +57,12 @@ import Button from "./Button.astro";
     ></label>
     <ul class="menu p-4 w-80 min-h-full bg-base-200">
       <!-- Sidebar content here -->
-      <li><HeaderLink class="header-link" href="/">Home</HeaderLink></li>
-      <li><HeaderLink class="header-link" href="/#about">About</HeaderLink></li>
+      <li><HeaderLink class="header-link" href="#">Home</HeaderLink></li>
+      <li><HeaderLink class="header-link" href="#about">About</HeaderLink></li>
       <li>
-        <HeaderLink class="header-link" href="/#projects">Projects</HeaderLink>
+        <HeaderLink class="header-link" href="#projects">Projects</HeaderLink>
       </li>
-      <li><HeaderLink class="header-link" href="/#blog">Blog</HeaderLink></li>
+      <li><HeaderLink class="header-link" href="#blog">Blog</HeaderLink></li>
     </ul>
   </div>
 </div>
@@ -76,35 +76,45 @@ import Button from "./Button.astro";
       href="/">{SITE_TITLE}</a
     >
     <div id="Header" class="flex gap-10">
-      <HeaderLink href="/#">Home</HeaderLink>
-      <HeaderLink href="/#about">About</HeaderLink>
-      <HeaderLink href="/#projects">Projects</HeaderLink>
-      <HeaderLink href="/#blog">Blog</HeaderLink>
+      <HeaderLink class="header-link" href="#">Home</HeaderLink>
+      <HeaderLink class="header-link" href="#about">About</HeaderLink>
+      <HeaderLink class="header-link" href="#projects">Projects</HeaderLink>
+      <HeaderLink class="header-link" href="#blog">Blog</HeaderLink>
     </div>
     <a href="/#contact"><Button>Start Project</Button></a>
   </nav>
 </header>
 
 <script>
-  document.querySelectorAll(".header-link  a")?.forEach((el) => {
-    console.log(el);
-    if (
-      el.textContent?.toLowerCase().trim() ===
-      window.location.hash.slice(1).trim()
-    ) {
-      el.setAttribute("active", "true");
-    } else {
-      el.setAttribute("active", "false");
-    }
+  // const hash = window.location.hash;
+  // let next = document.querySelector(`a[href="${hash}"]`));
 
-    el.addEventListener("click", (smtg) => {
-      console.log({ smtg });
-      document
-        .getElementById("my-drawer-3")
-        ?.setAttribute(
-          "checked",
-          !document.getElementById("my-drawer-3")?.getAttribute("checked")
-        );
-    });
-  });
+  // document.querySelectorAll(`a.header-link`).forEach(x => {
+  //   x.addEventListener('click', (event) => {
+  //     console.log({hash: window.location.hash});
+
+
+  //   })
+  // })
+  
+
+
+  // document.querySelectorAll(".header-link  a")?.forEach((el) => {
+  //   if (
+  //     el.textContent?.toLowerCase().trim() ===
+  //     window.location.hash.slice(1).trim()
+  //   ) {
+  //     el.setAttribute("active", "true");
+  //   } else {
+  //     el.setAttribute("active", "false");
+  //   }
+  //   el.addEventListener("click", (smtg) => {
+  //     document
+  //       .getElementById("my-drawer-3")
+  //       ?.setAttribute(
+  //         "checked",
+  //         !document.getElementById("my-drawer-3")?.getAttribute("checked")
+  //       );
+  //   });
+  // });
 </script>

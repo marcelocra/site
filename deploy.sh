@@ -15,7 +15,7 @@ rm -rf ./dist
 echo 'done!'
 
 echo 'building site...'
-pnpm run build
+npm run build
 echo 'done!'
 
 echo 'deploying site...'
