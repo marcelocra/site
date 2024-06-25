@@ -32,7 +32,7 @@
     "node": ">=20"
   },
   "engineStrict": true,
-  "packageManager": "npm@10",
+  "packageManager": "npm@10.5.0",
   "author": {
     "name": "Marcelo Almeida",
     "email": "npm@marcelocra.com"
