@@ -1,6 +1,7 @@
 export default new Map(
   Object.entries({
     cv: "https://www.canva.com/design/DAFfJBLsVSs/bNFNumjdhWy4ZldHkvSKOQ/view?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+    cvpdf: "https://drive.google.com/file/d/1NhhyGIworN1ntesP5a7JfqIpiBSQrFPP/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/marcelocra",
     whatsapp: "https://wa.me/5531971320866",
     vip: "https://docs.google.com/forms/d/e/1FAIpQLSeEvsAlYs96vbtXMNGPxGRTStibO9rn5TmLF9374HaKCt1c3g/viewform?usp=sf_link",
