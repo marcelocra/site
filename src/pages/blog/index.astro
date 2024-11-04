@@ -5,9 +5,11 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (
+  await getCollection("blog", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout>
@@ -16,7 +18,12 @@ const posts = (await getCollection("blog")).sort(
       {
         posts.map((post) => (
           <blog-post-card data-slug={post.slug}>
-            <div class="border border-slate-400 rounded-lg bg-gradient-to-b from-[var(--bg-bege)] to-[var(--light-gray)] duration-300 hover:scale-[1.03] p-4 flex flex-col gap-3 cursor-pointer h-full">
+            <div class="relative border border-slate-400 rounded-lg bg-gradient-to-b from-[var(--bg-bege)] to-[var(--light-gray)] duration-300 hover:scale-[1.03] p-4 flex flex-col gap-3 cursor-pointer h-full">
+              {post.data.draft && (
+                <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg rounded-tr-md">
+                  Draft
+                </div>
+              )}
               <FormattedDate class="font-mono" date={post.data.pubDate} />
               <div class="font-bold">{post.data.title}</div>
               <div class="text-sm">
