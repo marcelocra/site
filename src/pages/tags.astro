@@ -1,8 +1,8 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPosts } from "../lib/get-posts";
 
-const tags = (await getCollection("blog"))
+const tags = (await getPosts())
   // Merge all their tags together.
   .flatMap((post) => post.data.tags)
   .filter((tag) => tag !== null && tag !== undefined && tag !== "");

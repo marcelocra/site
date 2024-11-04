@@ -1,12 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import Button from "../Button.astro";
 import Card from "../Card.astro";
 import MultipleCardsCarousel from "./MultipleCardsCarousel.astro";
+import { getPosts } from "../../lib/get-posts";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = await getPosts();
 
 const days = 60;
 const now = new Date();
