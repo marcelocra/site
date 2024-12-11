@@ -8,14 +8,14 @@ const posts = await getPosts();
 
 const days = 60;
 const now = new Date();
-// @ts-expect-error - TS doesn't like date arithmetic.
-const dateDiff = (date) => now - date;
+const dateDiff = (date: Date) => now.getTime() - date.getTime();
 
-// New post is a post that was published within `days` days.
-const isNewPost = (date: Date) => dateDiff(date) / (1000 * 60 * 60 * 24) < days;
+/** New post is a post that was published within {@link days} days. */
+const isNewPost = (date: string) =>
+  dateDiff(new Date(date)) / (1000 * 60 * 60 * 24) < days;
 ---
 
-<MultipleCardsCarousel title="Recent Articles" href="/blog">
+<MultipleCardsCarousel title="Recent Blog Articles" href="/blog" rows={2}>
   {
     posts.map((post) => (
       <Card

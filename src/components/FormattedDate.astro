@@ -11,12 +11,24 @@ const { date } = Astro.props;
     constructor() {
       super();
 
+      const date = this.dataset.date;
+
+      if (!date) {
+        return;
+      }
+
+      const hasTime = date.length > 10;
+
       this.querySelector("time")!.textContent = new Date(
-        this.dataset.date!
-      ).toLocaleDateString(navigator.language ?? "en", {
+        date
+      ).toLocaleDateString(navigator.language ?? "pt-br", {
         year: "numeric",
         month: "short",
         day: "numeric",
+        timeZone: "America/Sao_Paulo",
+        ...(hasTime
+          ? { hour: "2-digit", minute: "2-digit", hour12: false }
+          : {}),
       });
     }
   }
