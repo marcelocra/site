@@ -23,20 +23,25 @@ jobs:
         with:
           deno-version: v1.x
 
+      - name: Install Pnpm Package Manager
+        uses: pnpm/action-setup@v4
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 20
+          cache: "pnpm"
 
-      - name: Install step
-        run: "npm install"
+      - name: Install
+        run: "pnpm install"
 
-      - name: Build step
-        run: "npm run build"
+      - name: Build
+        run: "pnpm run build"
+
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "marcelocra"
-          entrypoint: "https://deno.land/std@0.220.0/http/file_server.ts"
+          entrypoint: "https://jsr.io/@std/http/1.0.7/file_server.ts"
           root: "dist"
