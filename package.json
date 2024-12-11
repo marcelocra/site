@@ -1,7 +1,7 @@
 {
   "name": "site",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -32,6 +32,7 @@
     "node": ">=20"
   },
   "engineStrict": true,
+  "packageManager": "pnpm@9.15.0",
   "author": {
     "name": "Marcelo Almeida",
     "email": "npm@marcelocra.com"

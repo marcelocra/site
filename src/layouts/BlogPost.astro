@@ -9,7 +9,7 @@ const { title, pubDate, updatedDate } = Astro.props;
 ---
 
 <BaseLayout>
-  <article class="prose prose-stone my-10 max-w-[70%] mx-auto">
+  <article class="prose prose-stone my-10 min-w-full mx-auto">
     <h1>{title}</h1>
     <div class="font-semibold italic text-sm text-right -mt-3">
       Publicado: <FormattedDate date={pubDate} />

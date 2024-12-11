@@ -23,20 +23,28 @@
 - add an easter egg that makes the site more fun/different
 - create the cv in a dedicated page
 
+## [0.3.0] - 2024-12-11 09:56
+
+### Fixed
+
+- Removed unneeded custom component, also fixing the links in blog post list
+- Added pnpm as packageManager in package.json, required for the GitHub Action
+  to work correctly
+
+### Changed
+
+- Improve posts width
+
 ## [0.2.0] - 2024-12-11 09:20
 
 ### Added
 
 - Tracking changelog here and versions in [package.json](./package.json).
 
-### Fixed
-
 ### Changed
 
 - Update Astro (v4 -> v5)
 - Use date or datetime for frontmatter dates in blog posts
-
-### Removed
 
 ## [0.1.5]
 
