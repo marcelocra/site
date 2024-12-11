@@ -3,9 +3,9 @@ title: Hello Deno, goodbye node_modules!
 description: >
   [Deno](https://deno.land) é um projeto bem interessante! Só de não ter
   `node_modules` já me deixou bem satisfeito, mas tem ainda mais coisas.
-pubDate: 2022-09-07
-createdDate: 2022-09-07
-updatedDate: 2022-10-15
+pubDate: "2022-09-07"
+createdDate: "2022-09-07"
+updatedDate: "2022-10-15"
 tags:
   - deno
 ---

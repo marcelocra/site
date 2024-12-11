@@ -6,9 +6,9 @@ description: >
   ponteiro para o arquivo, que vai ser armazenado no provedor git que você
   utilizar (por exemplo, github).
 
-pubDate: 2022-10-06
-createdDate: 2022-10-06
-updatedDate: 2022-10-12
+pubDate: "2022-10-06"
+createdDate: "2022-10-06"
+updatedDate: "2022-10-12"
 tags:
   - git
   - git-lfs

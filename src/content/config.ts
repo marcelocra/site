@@ -1,30 +1,41 @@
+import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
-const blog = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
+const datetimeWithOffset = z
+  .string()
+  .date()
+  .or(z.string().datetime({ offset: true }));
 
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
+const BlogSchema = z.object({
+  title: z.string(),
+  description: z.string(),
 
-    tags: z.array(z.string()).optional(),
+  createdDate: datetimeWithOffset,
+  pubDate: datetimeWithOffset,
+  updatedDate: datetimeWithOffset.optional(),
 
-    heroImage: z.string().optional(),
-    image: z
-      .object({
-        url: z.string(),
-        alt: z.string(),
-      })
-      .optional(),
+  tags: z.array(z.string()).optional(),
 
-    draft: z.boolean().optional(),
-  }),
+  heroImage: z.string().optional(),
+  image: z
+    .object({
+      url: z.string(),
+      alt: z.string(),
+    })
+    .optional(),
+
+  draft: z.boolean().optional(),
+  writing: z.boolean().optional(),
 });
 
+const blog = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "src/content/blog" }),
+  schema: BlogSchema,
+});
+export type Blog = z.infer<typeof BlogSchema>;
+
 const timeline = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "src/content/timeline" }),
   schema: z.object({
     name: z.string(),
     year: z.number(),

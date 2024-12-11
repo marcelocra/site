@@ -4,8 +4,8 @@ description: >
   Por que o Exercism é uma das melhores formas de aprender programação
   atualmente, especialmente com a ideia do #12in23!
 
-pubDate: 2023-03-20
-createdDate: 2023-03-20
+pubDate: "2023-03-20"
+createdDate: "2023-03-20"
 # updatedDate: 2023-03-20
 tags:
   - vídeos

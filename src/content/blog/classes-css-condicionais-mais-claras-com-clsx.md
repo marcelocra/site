@@ -4,8 +4,8 @@ title:
 description: >
   A biblioteca `clsx` facilita a escrita de classes condicionais do CSS e deixa
   o resultado mais fácil de ler, editar e formatar (pelo Prettier).
-pubDate: 2024-04-23
-createdDate: 2024-04-23
+pubDate: "2024-04-23"
+createdDate: "2024-04-23"
 # updatedDate: 2024-04-23
 tags:
   - javascript

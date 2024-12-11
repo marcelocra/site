@@ -2,8 +2,8 @@
 const { date } = Astro.props;
 ---
 
-<formatted-date data-date={date.toISOString()}>
-  <time class={Astro.props.class} datetime={date.toISOString()}> </time>
+<formatted-date data-date={date}>
+  <time class={Astro.props.class} datetime={date}> </time>
 </formatted-date>
 
 <script>
@@ -13,7 +13,7 @@ const { date } = Astro.props;
 
       this.querySelector("time")!.textContent = new Date(
         this.dataset.date!
-      ).toLocaleDateString(navigator.language ?? "en-us", {
+      ).toLocaleDateString(navigator.language ?? "en", {
         year: "numeric",
         month: "short",
         day: "numeric",

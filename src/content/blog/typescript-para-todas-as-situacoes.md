@@ -4,8 +4,8 @@ description: >
   Recentemente, enquanto fuçava na codebase do [Svelte
   Kit](https://github.com/sveltejs/kit) (equivalente ao Next.js para Svelte), vi
   que eles usam principalmente JavaScript.
-pubDate: Jan 23, 2023
-createdDate: Jan 23, 2023
+pubDate: "2023-01-23"
+createdDate: "2023-01-23"
 tags:
   - svelte
   - sveltekit

@@ -5,9 +5,9 @@ description: >
   ferramenta incrível. Agora mudei para outra que também está parecendo
   incrível.
 
-pubDate: 2022-09-03
-createdDate: 2022-09-03
-updatedDate: 2022-10-14
+pubDate: "2022-09-03"
+createdDate: "2022-09-03"
+updatedDate: "2022-10-14"
 tags:
   - deno
   - astro

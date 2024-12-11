@@ -24,7 +24,7 @@ const isNewPost = (date: Date) => dateDiff(date) / (1000 * 60 * 60 * 24) < days;
         tech={post.data.tags?.join(", ")}
         tag={isNewPost(post.data.pubDate) ? "new!" : ""}
         buttonText="Read more"
-        buttonHref={`/blog/${post.slug}`}
+        buttonHref={`/blog/${post.id}`}
       />
     ))
   }

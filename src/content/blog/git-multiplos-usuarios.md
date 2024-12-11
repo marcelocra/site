@@ -5,9 +5,9 @@ description: >
   GitHub por meio da linha de comando do Git, finalmente eu encontrei uma
   solução.
 
-pubDate: 2022-09-26
-createdDate: 2022-09-26
-updatedDate: 2022-09-26
+pubDate: "2022-09-26"
+createdDate: "2022-09-26"
+updatedDate: "2022-09-26"
 tags:
   - git
   - git credential manager

@@ -5,9 +5,9 @@ description: >
   excelente ferramenta de fuzzy searching (busca sem ter match exato, como o
   VSCode faz no `ctrl+p` e `ctrl+shift+p`, por exemplo).
 
-pubDate: 2022-09-25
-createdDate: 2022-09-25
-updatedDate: 2022-09-30
+pubDate: "2022-09-25"
+createdDate: "2022-09-25"
+updatedDate: "2022-09-30"
 tags:
   - fzf
   - terminal

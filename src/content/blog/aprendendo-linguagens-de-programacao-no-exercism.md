@@ -3,9 +3,9 @@ title: Aprendendo liguagens de programação (funcionais?) no Exercism
 description: >
   Uma forma bem interessante de aprender linguagens de programação.
 
-pubDate: 2023-03-04
-createdDate: 2023-03-02
-updatedDate: 2023-03-17
+pubDate: "2023-03-04"
+createdDate: "2023-03-02"
+updatedDate: "2023-03-17"
 tags:
   - f#
   - fsharp
@@ -116,7 +116,7 @@ linguagens mais "próximas da máquina", como Go, Rust, Nim, Zig, V e as
 conhecidas C e C++.
 
 <div class="italic text-xs text-orange-400">
-Edit 17mar2023: estou testando diversas trilhas, incluindo Common Lips, Rust e 
+Edit 17mar2023: estou testando diversas trilhas, incluindo Common Lips, Rust e
 V (vlang.io). Está sendo bem interessante.
 </div>
 

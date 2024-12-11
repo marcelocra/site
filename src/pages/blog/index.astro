@@ -4,6 +4,7 @@ import { marked } from "marked";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getPosts } from "../../lib/get-posts";
+import clsx from "clsx";
 
 const posts = await getPosts();
 ---
@@ -13,14 +14,24 @@ const posts = await getPosts();
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
       {
         posts.map((post) => (
-          <blog-post-card data-slug={post.slug}>
-            <div class="relative border border-slate-400 rounded-lg bg-gradient-to-b from-[var(--bg-bege)] to-[var(--light-gray)] duration-300 hover:scale-[1.03] p-4 flex flex-col gap-3 cursor-pointer h-full">
+          <blog-post-card data-slug={post.id}>
+            <div
+              class={clsx(
+                "relative border border-slate-400 rounded-lg duration-300 hover:scale-[1.03] p-4 flex flex-col gap-3 cursor-pointer h-full",
+                post.data.writing
+                  ? "bg-gradient-to-br from-slate-100 to-slate-400"
+                  : "bg-gradient-to-b from-[var(--bg-bege)] to-[var(--light-gray)] "
+              )}
+            >
               {post.data.draft && (
                 <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg rounded-tr-md">
                   Draft
                 </div>
               )}
-              <FormattedDate class="font-mono" date={post.data.pubDate} />
+              <FormattedDate
+                class="italic text-slate-600 text-xs"
+                date={post.data.pubDate}
+              />
               <div class="font-bold">{post.data.title}</div>
               <div class="text-sm">
                 <Fragment
@@ -39,6 +50,11 @@ const posts = await getPosts();
               ) : (
                 <div>{post.data.title}</div>
               )} */}
+              {post.data.writing && (
+                <div class="absolute bottom-0 left-0 right-0 text-xs bg-slate-200 border-t border-slate-400 p-2 justify-center rounded-b-lg flex flex-grow items-center drop-shadow-lg tracking-widest uppercase font-black">
+                  <sup>*</sup>&nbsp;Esse post ainda não foi finalizado
+                </div>
+              )}
             </div>
           </blog-post-card>
         ))

@@ -26,19 +26,14 @@ import Header from "../components/Header.astro";
       }
     </style>
   </head>
-  <body class="min-h-screen flex flex-col justify-between">
+  <body class="min-h-screen">
     <!-- Desktop. -->
-    <div class="hidden sm:block min-w-[1200px] overflow-x-scroll">
-      <div>
-        <Header />
-        <main
-          class="max-w-[var(--max-width)] mx-auto flex flex-col gap-10 relative"
-        >
-          <slot />
-        </main>
-      </div>
+    <div class="hidden sm:flex sm:flex-col sm:justify-between min-w-[1200px]">
+      <Header />
+      <main class="max-w-[var(--max-width)] mx-auto flex flex-col gap-10">
+        <slot />
+      </main>
       <Footer />
-      <div id="bg"></div>
     </div>
 
     <!-- Mobile. Not supported for now. -->
@@ -51,5 +46,7 @@ import Header from "../components/Header.astro";
         > e o meu GitHub <a href="https://github.com/marcelocra">aqui</a>.
       </div>
     </div>
+
+    <div id="bg"></div>
   </body>
 </html>

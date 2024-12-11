@@ -5,5 +5,8 @@ export async function getPosts() {
     await getCollection("blog", ({ data }) => {
       return import.meta.env.PROD ? data.draft !== true : true;
     })
-  ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  ).sort(
+    (a, b) =>
+      new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 }
