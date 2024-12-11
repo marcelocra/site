@@ -51,8 +51,9 @@ const posts = await getPosts();
                 <div>{post.data.title}</div>
               )} */}
               {post.data.writing && (
+                <div class="mt-4"></div>
                 <div class="absolute bottom-0 left-0 right-0 text-xs bg-slate-200 border-t border-slate-400 p-2 justify-center rounded-b-lg flex flex-grow items-center drop-shadow-lg tracking-widest uppercase font-black">
-                  <sup>*</sup>&nbsp;Esse post ainda não foi finalizado
+                  sendo escrito em público
                 </div>
               )}
             </div>
