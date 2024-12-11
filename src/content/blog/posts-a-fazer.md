@@ -44,4 +44,10 @@ let formattedDate = new Date(date).toLocaleDateString(
 
 ## CSS position relative e absolute
 
+## Como usar o conventional commits para gerar changelogs e versões
+
+## Referências interessantes
+
+- https://keepachangelog.com/
+
 <Hello />
