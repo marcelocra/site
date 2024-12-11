@@ -4,6 +4,9 @@
 
 ### P0
 
+- Revisar as tags (recent, archived, new) da home, tanto de projects quanto de
+  blog
+
 ### P1
 
 - fix active links
@@ -20,11 +23,11 @@
 - add an easter egg that makes the site more fun/different
 - create the cv in a dedicated page
 
-## [0.2.0] - 2024-12-11 07:10
-
-Track changelog here and versions in [package.json](./package.json).
+## [0.2.0] - 2024-12-11 09:20
 
 ### Added
+
+- Tracking changelog here and versions in [package.json](./package.json).
 
 ### Fixed
 
