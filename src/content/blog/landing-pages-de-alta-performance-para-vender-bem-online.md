@@ -4,8 +4,7 @@ author: Marcelo Almeida
 description: >
   Não basta ser bonita e funcionar bem no celular.
 createdDate: "2024-12-10T09:36:00-03:00"
-pubDate: "2024-12-11T00:01:30-03:00"
-updatedDate: "2024-12-11T00:01:30-03:00"
+pubDate: "2024-12-11T08:49:30-03:00"
 writing: true
 tags:
   - landing pages
