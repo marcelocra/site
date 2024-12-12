@@ -4,6 +4,7 @@
 
 ### P0
 
+- Create a mobile version
 - Revisar as tags (recent, archived, new) da home, tanto de projects quanto de
   blog
 
