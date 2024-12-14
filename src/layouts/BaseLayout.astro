@@ -27,11 +27,9 @@ import Header from "../components/Header.astro";
     </style>
   </head>
   <!-- Allow at most the h-screen, hiding everything else. -->
-  <body class="max-h-screen overflow-hidden">
-    <!-- Desktop. -->
-
+  <body class="max-h-screen overflow-hidden max-w-screen">
     <!-- Use at most h-screen, see header and main div comments below. -->
-    <div class="flex flex-col justify-between h-screen">
+    <div class="flex flex-col justify-between h-screen w-screen">
       <!-- Define exactly the height we want for the header. -->
       <div class="h-16 sticky top-0 z-50">
         <Header />
@@ -40,23 +38,12 @@ import Header from "../components/Header.astro";
       <div
         class="h-[calc(100vh-4rem)] overflow-y-scroll [scrollbar-color:initial] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-purple-300 [&::-webkit-scrollbar-track]:bg-purple-100 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar]:h-1"
       >
-        <main class="max-w-full mx-32 flex flex-col gap-10">
+        <main class="sm:mx-32 flex flex-col gap-10">
           <slot />
         </main>
         <Footer />
       </div>
       <div id="bg"></div>
     </div>
-
-    <!-- Mobile. Not supported for now. -->
-    <!-- <div class="flex items-center sm:hidden p-10 bg-slate-900 h-screen">
-      <div
-        class="p-10 text-center rounded-xl shadow-lg bg-gradient-to-br from-[#fbd8e7] via-[#d3fdac] to-[#7cf8f1]"
-      >
-        Estou lapidando a versão mobile! Mas você pode ver o meu CV <a
-          href="https://mcra.dev/cv">aqui</a
-        > e o meu GitHub <a href="https://github.com/marcelocra">aqui</a>.
-      </div>
-    </div> -->
   </body>
 </html>
