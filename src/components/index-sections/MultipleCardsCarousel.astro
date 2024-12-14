@@ -11,7 +11,7 @@ const { title, href, rows = 1 } = Astro.props;
 
 <div
   class={clsx(
-    "grid grid-flow-col gap-3 justify-between w-full overflow-x-scroll [&::-webkit-scrollbar]:hidden p-3",
+    "grid grid-flow-col gap-3 justify-between w-full overflow-x-scroll [&::-webkit-scrollbar]:hidden pb-3 sm:p-3",
     rows === 1 && "grid-rows-1",
     rows === 2 && "grid-rows-2"
   )}
