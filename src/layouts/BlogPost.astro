@@ -24,3 +24,60 @@ const { title, pubDate, updatedDate } = Astro.props;
     <slot />
   </article>
 </BaseLayout>
+
+<style is:global>
+  /* html {
+    @apply [scrollbar-color:initial] hover:[scrollbar-color:initial] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[rgb(216,215,208)] [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar]:w-2 hover:[&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-300 hover:[&::-webkit-scrollbar-track]:bg-gray-100 hover:[&::-webkit-scrollbar]:w-2;
+  } */
+
+  section.footnotes::before {
+    content: "-----";
+    @apply text-zinc-400;
+  }
+
+  section.footnotes > ol::before {
+    content: "Notas";
+    @apply italic font-semibold -ml-5;
+  }
+
+  section.footnotes {
+    @apply text-sm font-sans;
+  }
+
+  section.footnotes li::marker {
+    @apply text-zinc-400;
+  }
+
+  section.footnotes::after {
+    content: "-----";
+    @apply text-zinc-400;
+  }
+
+  article > p > sup > a {
+    scroll-margin-top: 80px;
+    color: red;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<!-- <script>
+  // After clicking on a footnote, scroll to the footnote smoothly, stopping 20px after it. Footnotes have the property 'data-footnote-backref' with href pointing to the footnote id.
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLAnchorElement;
+    if (target.dataset.footnoteBackref === "") {
+      event.preventDefault();
+      const noteId = target.href.split("#")[1];
+      if (!noteId) return;
+      const note = document.getElementById(noteId);
+      if (note) {
+        note.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }
+  });
+</script> -->
