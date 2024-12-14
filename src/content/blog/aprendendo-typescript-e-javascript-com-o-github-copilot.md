@@ -6,7 +6,6 @@ description: >
   diariamente.
 createdDate: "2024-12-11T07:45:22-03:00"
 pubDate: "2024-12-11T08:56:05-03:00"
-updatedDate: "2024-12-11T07:45:22-03:00"
 writing: true
 tags:
   - github

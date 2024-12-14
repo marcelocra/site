@@ -3,13 +3,17 @@ title: Posts a fazer
 description: Posts que ainda quero fazer nesse blog.
 pubDate: "2024-11-04"
 createdDate: "2024-11-04"
-updatedDate: "2024-11-04"
+updatedDate: "2024-12-17"
 draft: true
 ---
 
 Posts que ainda quero fazer nesse blog, com alguns detalhes.
 
 TODO: talvez criar um componente que permita que as pessoas votem?
+
+## Como usar scroll, scrollbar e posicionar corretamente os elementos usando TailwindCSS
+
+Olhar o BaseLayout.astro
 
 ## Como usar Elm em uma extensão do Chrome
 
