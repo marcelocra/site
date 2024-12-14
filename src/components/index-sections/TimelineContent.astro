@@ -12,13 +12,15 @@ const { name, year, isTextFirst = true } = Astro.props;
   the "year div" will be already in place, and since the content one
   starts in col-span-1, it will be in the next row.
  -->
-<div class="grid grid-rows-1 grid-cols-11 gap-3 items-center">
+<div
+  class="flex flex-col sm:grid sm:grid-rows-1 sm:grid-cols-11 gap-3 items-center"
+>
   {
     year && (
       <div
         class={clsx(
           "row-start-1 col-start-6 col-span-1 text-3xl font-medium",
-          isTextFirst ? "text-right" : "text-left"
+          isTextFirst ? "sm:text-right text-left" : "text-left"
         )}
       >
         {year}
