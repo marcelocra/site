@@ -9,6 +9,7 @@ image:
 pubDate: "2022-10-17"
 createdDate: "2022-10-17"
 updatedDate: "2022-10-17"
+draft: true
 tags: ["astro", "learning in public", "setbacks", "community"]
 ---
 

@@ -10,6 +10,7 @@ createdDate: "2023-03-20"
 tags:
   - vídeos
   - exercism
+draft: true
 ---
 
 Esse é o roteiro inicial do vídeo.

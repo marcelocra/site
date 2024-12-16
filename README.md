@@ -24,6 +24,21 @@
 - add an easter egg that makes the site more fun/different
 - create the cv in a dedicated page
 
+## [0.4.0] - 2024-12-16 17:54
+
+### Added
+
+### Fixed
+
+- Add draft to all draft posts (some starting with `_` were not marked as draft)
+- Fix width and height of containers, to avoid weird overflows
+- Add shadow in small screens for header links
+- Use better link anchors
+
+### Changed
+
+### Removed
+
 ## [0.3.0] - 2024-12-11 09:56
 
 ### Fixed
