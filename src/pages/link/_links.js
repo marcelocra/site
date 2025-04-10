@@ -1,6 +1,8 @@
 export default new Map(
   Object.entries({
-    cv: "https://www.canva.com/design/DAFfJBLsVSs/-kIs2JfCJm7E7aBOH-BuZQ/view?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6f3da2052c",
+    cv: "https://www.canva.com/design/DAFfJBLsVSs/bNFNumjdhWy4ZldHkvSKOQ/view?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+    cvOld: "https://mcra.dev/cv",
+    cvApr25: "https://www.canva.com/design/DAFfJBLsVSs/-kIs2JfCJm7E7aBOH-BuZQ/view?utm_content=DAFfJBLsVSs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6f3da2052c",
     cvpdf: "https://drive.google.com/file/d/1NhhyGIworN1ntesP5a7JfqIpiBSQrFPP/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/marcelocra",
     whatsapp: "https://wa.me/5531971320866",
