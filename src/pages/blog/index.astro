@@ -17,33 +17,23 @@ const posts = await getPosts();
           <div
             class={clsx(
               "relative border border-slate-400 rounded-lg duration-300 hover:scale-[1.03] p-4 h-full",
-              post.data.writing &&
-                "bg-gradient-to-br from-slate-100 to-slate-400",
-              !post.data.writing &&
-                "bg-gradient-to-b from-[var(--bg-bege)] to-[var(--light-gray)]"
+              post.data.writing && "bg-gradient-to-br from-slate-100 to-slate-400",
+              !post.data.writing && "bg-gradient-to-b from-[var(--bg-bege)] to-[var(--light-gray)]"
             )}
           >
-            <a
-              href={`/blog/${post.id}/`}
-              class="no-underline link-neutral flex flex-col gap-3 cursor-pointer"
-            >
+            <a href={`/blog/${post.id}/`} class="no-underline link-neutral flex flex-col gap-3 cursor-pointer">
               {post.data.draft && (
                 <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg rounded-tr-md">
                   Draft
                 </div>
               )}
 
-              <FormattedDate
-                class="italic text-slate-600 text-xs"
-                date={post.data.pubDate}
-              />
+              <FormattedDate class="italic text-slate-600 text-xs" date={post.data.pubDate} />
 
               <div class="font-bold">{post.data.title}</div>
 
               <div class="text-sm">
-                <Fragment
-                  set:html={marked.parseInline(post.data.description)}
-                />
+                <Fragment set:html={marked.parseInline(post.data.description)} />
               </div>
 
               {post.data.writing && (
@@ -54,7 +44,7 @@ const posts = await getPosts();
 
               {post.data.writing && (
                 <div class="absolute bottom-0 left-0 right-0 text-xs bg-slate-200 border-t border-slate-400 p-2 justify-center rounded-b-lg flex flex-grow items-center drop-shadow-lg tracking-widest uppercase font-black">
-                  sendo escrito em público
+                  Incompleto, mas útil :)
                 </div>
               )}
             </a>
